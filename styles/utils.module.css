@@ -77,3 +77,43 @@
   /* text-shadow: 2px 2px #f5f5e8, 2px -2px #f5f5e8, -2px 2px #f5f5e8,
     -2px -2px #f5f5e8; */
 }
+
+.anchorLight {
+  color: #2e465c;
+  border-bottom: 0.15em solid #e7c2b8;
+  display: inline-block;
+  line-height: 0.6;
+  text-decoration: none;
+}
+
+.anchorLight:hover {
+  text-decoration: underline;
+  border-bottom: 0.15em solid #f5f5e8;
+  display: inline-block;
+  line-height: 0.6;
+}
+
+.anchorDark {
+  color: #f5f5e8;
+  border-bottom: 0.15em solid #e7c2b8;
+  display: inline-block;
+  line-height: 0.6;
+  text-decoration: none;
+}
+
+.anchorDark:hover {
+  text-decoration: underline;
+  border-bottom: 0.15em solid #1f2937;
+  display: inline-block;
+  line-height: 0.6;
+}
+
+.imageBorder {
+  border: 4px solid #2e465c;
+  padding: 3px;
+}
+
+.imageBorderDark {
+  border: 4px solid #f5f5e8;
+  padding: 3px;
+}

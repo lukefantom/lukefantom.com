@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme("light");
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
@@ -15,7 +15,7 @@ const ThemeChanger = () => {
       <button
         aria-label="Toggle Dark Mode"
         type="button"
-        className="p-3 h-12 w-12 order-2 md:order-3"
+        className="p-3 h-12 w-12 order-2 md:order-3 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-700"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         {" "}
