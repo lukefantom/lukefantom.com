@@ -3,8 +3,9 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import cn from "classnames";
-import Navigation from "./navigation";
+import Navigation from "./Navigation/navigation";
 import { useTheme } from "next-themes";
+import LogoBackground from "../graphics/logoBackground";
 
 const name = "Luke Fantom";
 export const siteTitle = "Luke Fantom Portfolio";
@@ -30,24 +31,38 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-        <header className={styles.header}>
+        <header className={styles.homeHeader}>
           {home ? (
             <>
               {/* <Navigation /> */}
-              <img
-                src="/images/profile.jpg"
-                className={cn(
-                  styles.headerHomeImage,
-                  utilStyles.borderCircle,
-                  theme === "dark"
-                    ? utilStyles.imageBorderDark
-                    : utilStyles.imageBorder
-                )}
-                alt={name}
-              />
-              <h1 className={cn(utilStyles.title, utilStyles.underline)}>
-                {name}
-              </h1>
+              <div className="relative">
+                <LogoBackground />
+                <h1
+                  className={cn(
+                    utilStyles.title,
+                    utilStyles.underline,
+                    "absolute"
+                  )}
+                  style={{
+                    transform: "translate(90%, 140%)",
+                    bottom: "100%",
+                    right: "100%",
+                    color: "#2e465c",
+                    lineHeight: 0.8,
+                  }}
+                >
+                  {name}
+                </h1>
+              </div>
+
+              <section
+                className={utilStyles.headingMd}
+                style={{ display: "flex", flexDirection: "row-reverse" }}
+              >
+                <h2 className={utilStyles.headingXl}>
+                  I'm a creator, producer and software developer.
+                </h2>
+              </section>
             </>
           ) : (
             <>

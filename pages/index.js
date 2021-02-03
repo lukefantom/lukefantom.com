@@ -5,6 +5,7 @@ import utilStyles from "../styles/utils.module.css";
 import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import { useTheme } from "next-themes";
+import ProjectContainer from "../components/ProjectContainer/projectContainer";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -22,9 +23,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>I'm a creator, producer and software developer.</p>
-      </section>
+      <ProjectContainer />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
