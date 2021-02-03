@@ -36,9 +36,13 @@ export default function Layout({ children, home }) {
             <>
               {/* <Navigation /> */}
               <div className="relative">
-                <LogoBackground />
+                <div className={styles.animate3}>
+                  <LogoBackground />
+                </div>
+
                 <h1
                   className={cn(
+                    styles.animate2,
                     utilStyles.title,
                     utilStyles.underline,
                     "absolute"
@@ -59,7 +63,7 @@ export default function Layout({ children, home }) {
                 className={utilStyles.headingMd}
                 style={{ display: "flex", flexDirection: "row-reverse" }}
               >
-                <div className={styles.animate}>
+                <div className={styles.animate1}>
                   <h2 className={utilStyles.headingXl}>
                     I'm a creator, producer and software developer.
                   </h2>

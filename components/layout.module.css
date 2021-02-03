@@ -30,12 +30,13 @@
   margin: 3rem 0 0;
 }
 
-.animate {
+/* -------------Animations--------------- */
+.animate1 {
   position: relative;
-  animation: mymove 1.5s;
+  animation: gradualOpacity 2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-@-webkit-keyframes mymove {
+@-webkit-keyframes gradualOpacity {
   0% {
     transform: translateY(1.2em);
     opacity: 0;
@@ -46,7 +47,7 @@
   }
 }
 /* Standard syntax */
-@keyframes mymove {
+@keyframes gradualOpacity {
   0% {
     transform: translateY(1.2em);
     opacity: 0;
@@ -59,5 +60,47 @@
   100% {
     transform: translate(0px, 0px);
     opacity: 100;
+  }
+}
+
+.animate2 {
+  /* position: relative; */
+  animation: headerMove 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Standard syntax */
+@keyframes headerMove {
+  0% {
+    opacity: 0;
+    transform: translate(0%, 140%);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(90%, 140%);
+  }
+}
+
+.animate3 {
+  animation: bgColor 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Standard syntax */
+@keyframes bgColor {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 100;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }
