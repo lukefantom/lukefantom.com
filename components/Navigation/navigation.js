@@ -54,12 +54,12 @@ export default function Navigation() {
           </a>
         </Link>
         <ul className="hidden md:flex">{renderNavigationItems()}</ul>
-        <ul
+        {/* <ul
           ref={navigationMobileRef}
           className="md:hidden absolute flex flex-col w-full top-16 left-0 py-3 items-center bg-darkPurple dark:bg-orange transform translate-x-full"
         >
           {renderNavigationItems()}
-        </ul>
+        </ul> */}
         <div
           ref={mobileIconRef}
           onClick={toggleMobileNavigation}
