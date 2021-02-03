@@ -93,16 +93,16 @@
 }
 
 /* Small devices */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .gridContainer {
-    margin-top: 6rem;
+    margin-top: 5rem;
   }
 }
 
 /* XSmall devices */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .sectionHeader {
-    font-size: 18vw;
+    font-size: 12vw;
   }
   .gridItemHeader {
     font-size: 9.5vmin;

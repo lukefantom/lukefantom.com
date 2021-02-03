@@ -1,3 +1,5 @@
+import styles from "./logo.module.css";
+
 export default function LogoBackground() {
   return (
     <svg
@@ -5,6 +7,7 @@ export default function LogoBackground() {
       width="457.291"
       height="351.791"
       viewBox="0 0 387.291 281.791"
+      className={styles.logo}
     >
       <path
         id="Path_1"

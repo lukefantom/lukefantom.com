@@ -36,7 +36,7 @@ export default function Layout({ children, home }) {
             <>
               {/* <Navigation /> */}
               <div className="relative">
-                <div className={styles.animate3}>
+                <div className={(styles.animate3, "ml-8 md:ml-12")}>
                   <LogoBackground />
                 </div>
 
@@ -48,11 +48,12 @@ export default function Layout({ children, home }) {
                     "absolute"
                   )}
                   style={{
-                    transform: "translate(90%, 140%)",
+                    transform: "translate(100%, 140%)",
                     bottom: "100%",
                     right: "100%",
                     color: "#2e465c",
                     lineHeight: 0.8,
+                    fontSize: "calc(20px + 8vw)",
                   }}
                 >
                   {name}

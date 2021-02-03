@@ -126,3 +126,12 @@
   border: 4px solid #f5f5e8;
   padding: 3px;
 }
+
+/* ---------Break Points--------- */
+
+/* Small devices */
+@media only screen and (max-width: 600px) {
+  .headingXl {
+    font-size: 6vw;
+  }
+}
