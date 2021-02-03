@@ -59,9 +59,11 @@ export default function Layout({ children, home }) {
                 className={utilStyles.headingMd}
                 style={{ display: "flex", flexDirection: "row-reverse" }}
               >
-                <h2 className={utilStyles.headingXl}>
-                  I'm a creator, producer and software developer.
-                </h2>
+                <div className={styles.animate}>
+                  <h2 className={utilStyles.headingXl}>
+                    I'm a creator, producer and software developer.
+                  </h2>
+                </div>
               </section>
             </>
           ) : (

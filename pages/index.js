@@ -23,7 +23,14 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <ProjectContainer />
+      <ProjectContainer
+        primaryColor={"#3bab87"}
+        leftColor={"#FDF0EC"}
+        rightColor={"#98bec8"}
+        primaryTitle={"Test 1"}
+        leftTitle={"Test 2"}
+        rightTitle={"Test 3"}
+      />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
