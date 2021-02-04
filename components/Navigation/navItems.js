@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import utilStyles from "../../styles/utils.module.css";
+import styles from "./navItems.module.css";
 import cn from "classnames";
 import { useTheme } from "next-themes";
 
@@ -13,9 +14,9 @@ export default function renderNavigationItems() {
         navEl.classList.remove("active");
       });
     }
-    if (width <= 768) {
-      toggleMobileNavigation();
-    }
+    // if (width <= 768) {
+    //   toggleMobileNavigation();
+    // }git ad
   };
 
   return (
@@ -25,7 +26,8 @@ export default function renderNavigationItems() {
           <a
             className={cn(
               "relative",
-              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight
+              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
+              styles.navText
             )}
             onClick={linkClicked}
           >
@@ -38,7 +40,8 @@ export default function renderNavigationItems() {
           <a
             className={cn(
               "relative",
-              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight
+              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
+              styles.navText
             )}
             onClick={linkClicked}
           >
@@ -51,11 +54,12 @@ export default function renderNavigationItems() {
           <a
             className={cn(
               "relative",
-              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight
+              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
+              styles.navText
             )}
             onClick={linkClicked}
           >
-            Contact
+            Music
           </a>
         </Link>
       </li>
@@ -64,11 +68,12 @@ export default function renderNavigationItems() {
           <a
             className={cn(
               "relative",
-              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight
+              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
+              styles.navText
             )}
             onClick={linkClicked}
           >
-            CV
+            Contact
           </a>
         </Link>
       </li>
