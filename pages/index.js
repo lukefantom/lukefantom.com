@@ -29,7 +29,7 @@ export default function Home({ allPostsData }) {
 
       {/* ---------------------------------Personal Section--------------------------------- */}
 
-      <SectionContainer sectionHeader={"Personal"}>
+      <SectionContainer sectionHeader={"Personal"} id={"personal"}>
         <GridItem
           title={"Hey there, I'm Luke 👋"}
           color={"#408fa3"}
@@ -45,7 +45,7 @@ export default function Home({ allPostsData }) {
       </SectionContainer>
 
       {/* ---------------------------------Projects Section--------------------------------- */}
-      <SectionContainer sectionHeader={"Projects"}>
+      <SectionContainer sectionHeader={"Projects"} id={"projects"}>
         {allPostsData.map(({ id, title, summary, color }, index) => {
           if (index === 0 || index % 3 === 0) {
             return (
@@ -55,6 +55,7 @@ export default function Home({ allPostsData }) {
                 color={color}
                 text={summary}
                 link={id}
+                grow
                 fullWidth
               />
             );
@@ -66,11 +67,53 @@ export default function Home({ allPostsData }) {
               color={color}
               text={summary}
               link={id}
+              grow
             />
           );
         })}
       </SectionContainer>
-      {/* ---------------------------------Container Section--------------------------------- */}
+
+      {/* ---------------------------------Music Section--------------------------------- */}
+
+      <SectionContainer sectionHeader={"Music"} id={"music"}>
+        {allPostsData.map(({ id, title, summary, color }, index) => {
+          if (index === 0 || index % 3 === 0) {
+            return (
+              <GridItem
+                key={id}
+                title={title}
+                color={color}
+                text={summary}
+                link={id}
+                fullWidth
+                grow
+              />
+            );
+          }
+          return (
+            <GridItem
+              key={id}
+              title={title}
+              color={color}
+              text={summary}
+              link={id}
+              grow
+            />
+          );
+        })}
+      </SectionContainer>
+
+      {/* ---------------------------------Contact Section--------------------------------- */}
+
+      <SectionContainer sectionHeader={"Contact"} id={"contact"}>
+        <GridItem
+          title={"Come say hi..."}
+          color={"#d08090ed"}
+          text={"Email links and icons with links to social will go here"}
+          link
+          fullWidth
+        ></GridItem>
+      </SectionContainer>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>

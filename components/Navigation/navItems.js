@@ -64,7 +64,7 @@ export default function renderNavigationItems() {
         </Link>
       </li>
       <li className="sm:mr-6 font-medium">
-        <Link href="/contact">
+        <Link href={{ pathname: "/", hash: "contact" }}>
           <a
             className={cn(
               "relative",

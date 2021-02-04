@@ -12,12 +12,13 @@ export default function GridItem({
   link,
   children,
   image,
+  grow,
 }) {
   if (fullWidth) {
     return (
       <Link href={`/posts/${link}`}>
         <div
-          className={cn(styles.gridItem, styles.grow)}
+          className={cn(styles.gridItem, grow && styles.grow)}
           style={{ flex: "1 100%", backgroundColor: color }}
         >
           <h3 className={cn(styles.gridItemHeader)}>{title}</h3>
