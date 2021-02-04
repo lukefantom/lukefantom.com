@@ -46,7 +46,9 @@
 }
 
 .borderCircle {
-  border-radius: 9999px;
+  border-radius: 50%;
+  border: solid 0.35em #f5f5e8;
+  padding: 0.4em;
 }
 
 .colorInherit {
@@ -77,6 +79,11 @@
   line-height: 0.7;
   /* text-shadow: 2px 2px #f5f5e8, 2px -2px #f5f5e8, -2px 2px #f5f5e8,
     -2px -2px #f5f5e8; */
+}
+
+.headerHomeImage {
+  width: 8rem;
+  height: 8rem;
 }
 
 /* ------------Animated Links-------------- */
