@@ -5,7 +5,8 @@ import utilStyles from "../styles/utils.module.css";
 import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import { useTheme } from "next-themes";
-import ProjectContainer from "../components/ProjectContainer/projectContainer";
+import SectionContainer from "../components/ProjectContainer/sectionContainer";
+import GridItem from "../components/ProjectContainer/gridItem";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -23,14 +24,28 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <ProjectContainer
-        primaryColor={"#3bab87"}
-        leftColor={"#FDF0EC"}
-        rightColor={"#98bec8"}
-        primaryTitle={"Test 1"}
-        leftTitle={"Test 2"}
-        rightTitle={"Test 3"}
-      />
+
+      {/* ---------------------------------Container Section--------------------------------- */}
+      <SectionContainer sectionHeader={"Projects"}>
+        {allPostsData.map(({ title, summary, color }, index) => {
+          if (index === 0 || index % 3 === 0) {
+            return (
+              <GridItem
+                key={index}
+                title={title}
+                color={color}
+                text={summary}
+                fullWidth
+              />
+            );
+          }
+          return (
+            <GridItem key={index} title={title} color={color} text={summary} />
+          );
+        })}
+      </SectionContainer>
+      {/* ---------------------------------Container Section--------------------------------- */}
+
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
