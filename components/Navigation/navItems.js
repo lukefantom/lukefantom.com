@@ -50,7 +50,7 @@ export default function renderNavigationItems() {
         </Link>
       </li>
       <li className="sm:mr-6 font-medium">
-        <Link href={{ pathname: "/", hash: "contact" }}>
+        <Link href={{ pathname: "/", hash: "music" }}>
           <a
             className={cn(
               "relative",
@@ -64,7 +64,7 @@ export default function renderNavigationItems() {
         </Link>
       </li>
       <li className="sm:mr-6 font-medium">
-        <Link href="/cv">
+        <Link href="/contact">
           <a
             className={cn(
               "relative",

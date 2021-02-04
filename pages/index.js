@@ -2,11 +2,13 @@ import Head from "next/head";
 import Link from "next/link";
 import Date from "../components/date";
 import utilStyles from "../styles/utils.module.css";
+import cn from "classnames";
 import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import { useTheme } from "next-themes";
 import SectionContainer from "../components/ProjectContainer/sectionContainer";
 import GridItem from "../components/ProjectContainer/gridItem";
+import HelloGraphic from "../graphics/helloGraphic";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -25,22 +27,46 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
 
-      {/* ---------------------------------Container Section--------------------------------- */}
+      {/* ---------------------------------Personal Section--------------------------------- */}
+
+      <SectionContainer sectionHeader={"Personal"}>
+        <GridItem
+          title={"Hey there, I'm Luke 👋"}
+          color={"#408fa3"}
+          text={
+            "I am a software developer, designer and music producer who recently graduated from the School of Code. I have a strong passion for creating content and collaborating with others, whether this be through writing, music or technology."
+          }
+          link
+          image={"/images/profile.jpg"}
+          fullWidth
+        >
+          <HelloGraphic />
+        </GridItem>
+      </SectionContainer>
+
+      {/* ---------------------------------Projects Section--------------------------------- */}
       <SectionContainer sectionHeader={"Projects"}>
-        {allPostsData.map(({ title, summary, color }, index) => {
+        {allPostsData.map(({ id, title, summary, color }, index) => {
           if (index === 0 || index % 3 === 0) {
             return (
               <GridItem
-                key={index}
+                key={id}
                 title={title}
                 color={color}
                 text={summary}
+                link={id}
                 fullWidth
               />
             );
           }
           return (
-            <GridItem key={index} title={title} color={color} text={summary} />
+            <GridItem
+              key={id}
+              title={title}
+              color={color}
+              text={summary}
+              link={id}
+            />
           );
         })}
       </SectionContainer>
