@@ -37,7 +37,7 @@ export default function Home({ allPostsData }) {
             "I am a software developer, designer and music producer who recently graduated from the School of Code. I have a strong passion for creating content and collaborating with others, whether this be through writing, music or technology."
           }
           link
-          image={"/images/profile.jpg"}
+          // image={"/images/profile.jpg"}
           fullWidth
         >
           <HelloGraphic />
