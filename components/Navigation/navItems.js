@@ -13,9 +13,9 @@ export default function renderNavigationItems() {
         navEl.classList.remove("active");
       });
     }
-    if (width <= 768) {
-      toggleMobileNavigation();
-    }
+    // if (width <= 768) {
+    //   toggleMobileNavigation();
+    // }git ad
   };
 
   return (

@@ -7,6 +7,8 @@ import useWindowSize from "../../hooks/useWindowSize";
 import utilStyles from "../../styles/utils.module.css";
 import cn from "classnames";
 import renderNavigationItems from "./navItems";
+import BurgerMenu from "./burger";
+import Overlay from "./overlay";
 
 export default function Navigation() {
   const navigationMobileRef = useRef(null);
@@ -19,11 +21,11 @@ export default function Navigation() {
 
   React.useEffect(() => setMounted(true), []);
 
-  const toggleMobileNavigation = () => {
-    navigationMobileRef.current.classList.add("touched");
-    navigationMobileRef.current.classList.toggle("translate-x-full");
-    setMobileNavOpen(!mobileNavOpen);
-  };
+  // const toggleMobileNavigation = () => {
+  //   navigationMobileRef.current.classList.add("touched");
+  //   navigationMobileRef.current.classList.toggle("translate-x-full");
+  //   setMobileNavOpen(!mobileNavOpen);
+  // };
 
   return (
     <nav className="absolute dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0">
@@ -61,10 +63,19 @@ export default function Navigation() {
           {renderNavigationItems()}
         </ul> */}
         <div
+          // ref={mobileIconRef}
+          // onClick={toggleMobileNavigation}
+          className="md:hidden order-3 h-6 w-5 cursor-pointer relative"
+        >
+          {/* <BurgerMenu /> */}
+          <Overlay>
+            <ul>{renderNavigationItems()}</ul>
+          </Overlay>
+          {/* <div
           ref={mobileIconRef}
           onClick={toggleMobileNavigation}
           className="md:hidden order-3 h-6 w-5 cursor-pointer relative"
-        >
+        > */}
           <span
             className={`transform transition duration-300 ease-in-out absolute h-1 w-full bg-darkPurple dark:bg-orange rounded-lg left-0 ${
               mobileNavOpen ? "rotate-135 top-2" : "rotate-0"
