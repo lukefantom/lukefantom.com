@@ -4,8 +4,10 @@ import cn from "classnames";
 
 export default function SectionContainer({ children, sectionHeader, id }) {
   return (
-    <div className={cn(styles.gridContainer, "px-4 md:px-3 sm:px-2")} id={id}>
-      <h2 className={cn(styles.sectionHeader)}>{sectionHeader}</h2>
+    <div className={cn(styles.gridContainer, "px-4 md:px-3 sm:px-2")}>
+      <h2 className={cn(styles.sectionHeader)} id={id}>
+        {sectionHeader}
+      </h2>
       {children}
     </div>
   );
