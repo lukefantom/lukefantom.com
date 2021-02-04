@@ -34,9 +34,10 @@ export default function Navigation() {
           <a
             className={cn(
               "logo flex flex-row",
-              utilStyles.titleSmall,
-              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight
+              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
+              utilStyles.titleSmall
             )}
+            style={{ fontWeight: 800, letterSpacing: "-0.05rem" }}
           >
             <div className="letter inline-block top-0 relative">L</div>
             <div className="letter inline-block top-0 relative">u</div>

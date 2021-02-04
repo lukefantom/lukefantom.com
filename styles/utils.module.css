@@ -11,7 +11,7 @@
 
 .titleSmall {
   font-family: "Playfair Display", serif;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   line-height: 1.15;
   font-weight: 800;
   letter-spacing: -0.05rem;
@@ -70,14 +70,6 @@
 .lightText {
   color: #999;
 }
-/* 
-.underline {
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: #e7c2b8;
-  text-decoration-skip-ink: auto;
-  text-underline-position: auto;
-} */
 
 .underline {
   border-bottom: 0.14em solid #e7c2b8;
@@ -87,44 +79,69 @@
     -2px -2px #f5f5e8; */
 }
 
+/* ------------Animated Links-------------- */
+
 .anchorLight {
+  position: relative;
   color: #2e465c;
-  border-bottom: 0.15em solid #e7c2b8;
-  display: inline-block;
-  line-height: 0.6;
   text-decoration: none;
+  letter-spacing: -0.3px;
+  font-weight: 700;
 }
 
 .anchorLight:hover {
-  text-decoration: underline;
-  border-bottom: 0.15em solid #f5f5e8;
-  display: inline-block;
-  line-height: 0.6;
+  color: #2e465c;
+  border-bottom: none;
 }
 
+.anchorLight::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #e7c2b8;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.anchorLight:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* --------------Dark---------------- */
 .anchorDark {
+  position: relative;
   color: #f5f5e8;
-  border-bottom: 0.15em solid #e7c2b8;
-  display: inline-block;
-  line-height: 0.6;
   text-decoration: none;
+  letter-spacing: -0.3px;
+  font-weight: 700;
 }
 
 .anchorDark:hover {
-  text-decoration: underline;
-  border-bottom: 0.15em solid #1f2937;
-  display: inline-block;
-  line-height: 0.6;
+  color: #f5f5e8;
+  border-bottom: none;
 }
 
-.imageBorder {
-  border: 4px solid #2e465c;
-  padding: 3px;
+.anchorDark::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #e7c2b8;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s;
 }
 
-.imageBorderDark {
-  border: 4px solid #f5f5e8;
-  padding: 3px;
+.anchorDark:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 /* ---------Break Points--------- */
@@ -133,5 +150,8 @@
 @media only screen and (max-width: 600px) {
   .headingXl {
     font-size: 6vw;
+  }
+  .titleSmall {
+    font-size: 4.5vw;
   }
 }
