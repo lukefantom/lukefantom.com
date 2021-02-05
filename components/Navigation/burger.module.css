@@ -14,3 +14,32 @@
   background-color: lightcoral;
   overflow: auto;
 }
+
+.burgerIconLight {
+  border-bottom: 0.2em solid #2e465ce0;
+  width: 2em;
+  align-self: center;
+  margin: 5px auto 5px;
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.burgerIconDark {
+  border-bottom: 0.2em solid #f5f5e8b2;
+  width: 2em;
+  align-self: center;
+  margin: 5px auto 5px;
+  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.burgerContainer {
+  width: auto;
+}
+
+.burgerContainer:hover .burgerIconLight {
+  transform: scaleX(1.2);
+  border-bottom: 0.2em solid #2e465c;
+}
+
+.burgerContainer:hover .burgerIconDark {
+  transform: scaleX(1.2);
+  border-bottom: 0.2em solid #f5f5e8;
+}
