@@ -1,24 +1,24 @@
 import { useState } from "react";
-import styles from "./burger.module.css";
-import BurgerMenu from "./burger";
+import styles from "./overlay.module.css";
+import Hamburger from "./hamburgerAnimation/hamburger";
 
-export default function Overlay({ children }) {
-  const [open, setOpen] = useState(false);
-
+export default function Overlay({ children, burger, changeBurger, open }) {
   if (open) {
     return (
-      <div className={styles.overlay}>
-        <button onClick={() => setOpen(!open)}>
-          {open ? "Close" : "Open"}
-        </button>
-        <div onClick={() => setOpen(false)}>{children}</div>
-      </div>
+      <>
+        <div onClick={() => changeBurger}>
+          <Hamburger burger={burger} changeBurger={changeBurger} />
+        </div>
+        <div className={styles.overlay}>
+          <div onClick={() => changeBurger}>{children}</div>
+        </div>
+      </>
     );
   }
 
   return (
-    <div onClick={() => setOpen(!open)} className={styles.burgerContainer}>
-      <BurgerMenu />
+    <div onClick={() => changeBurger} className={styles.burgerContainer}>
+      <Hamburger changeBurger={changeBurger} />
     </div>
   );
 }

@@ -121,7 +121,7 @@
 /* Small devices */
 @media only screen and (max-width: 800px) {
   .gridContainer {
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding-left: 0;
     padding-right: 0;
   }

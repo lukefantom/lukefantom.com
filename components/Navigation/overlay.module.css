@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: 4rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -15,7 +15,7 @@
   overflow: auto;
 }
 
-.burgerIconLight {
+/* .burgerIconLight {
   border-bottom: 0.2em solid #2e465ce0;
   width: 2em;
   align-self: center;
@@ -30,9 +30,7 @@
   transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.burgerContainer {
-  width: auto;
-}
+.
 
 .burgerContainer:hover .burgerIconLight {
   transform: scaleX(1.2);
@@ -42,4 +40,4 @@
 .burgerContainer:hover .burgerIconDark {
   transform: scaleX(1.2);
   border-bottom: 0.2em solid #f5f5e8;
-}
+} */
