@@ -16,8 +16,6 @@ export default function Overlay({ children }) {
   }
 
   return (
-    <div>
-      <button onClick={() => setOpen(!open)}>{open ? "Close" : "Open"}</button>
-    </div>
+    <button onClick={() => setOpen(!open)}>{open ? "Close" : "Open"}</button>
   );
 }

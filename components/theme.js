@@ -1,5 +1,7 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+import styles from "./ProjectContainer/projectContainer.module.css";
+import cn from "classnames";
 
 const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
@@ -15,7 +17,10 @@ const ThemeChanger = () => {
       <button
         aria-label="Toggle Dark Mode"
         type="button"
-        className="p-3 h-12 w-12 order-2 md:order-3 focus:outline-none hover:bg-gray-300 dark:hover:bg-gray-700"
+        className={cn(
+          "p-3 h-12 w-12 order-2 md:order-3 focus:outline-none",
+          styles.growButton
+        )}
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         {" "}

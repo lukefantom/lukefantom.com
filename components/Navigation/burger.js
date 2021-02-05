@@ -5,8 +5,6 @@ export default function BurgerMenu() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div>
-      <button onClick={() => setOpen(!open)}>{open ? "open" : "closed"}</button>
-    </div>
+    <button onClick={() => setOpen(!open)}>{open ? "open" : "closed"}</button>
   );
 }

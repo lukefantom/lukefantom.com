@@ -9,3 +9,28 @@
   height: auto;
   max-height: 70vh;
 }
+
+.animateFloat {
+  animation: floating 5s ease-in-out infinite;
+}
+
+/* Standard syntax */
+@keyframes floating {
+  0% {
+    -webkit-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    -webkit-transform: translate(5px, 10px);
+    -ms-transform: translate(5px, 10px);
+    transform: translate(5px, 10px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, -0px);
+    -ms-transform: translate(0, -0px);
+    transform: translate(0, -0px);
+  }
+}

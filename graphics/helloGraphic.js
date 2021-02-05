@@ -1,4 +1,5 @@
 import styles from "./logo.module.css";
+import cn from "classnames";
 
 export default function HelloGraphic() {
   return (
@@ -9,7 +10,7 @@ export default function HelloGraphic() {
       width="903.82216"
       height="748.21523"
       viewBox="0 0 903.82216 748.21523"
-      className={styles.hello}
+      className={cn(styles.hello, styles.animateFloat)}
     >
       <defs>
         <linearGradient
