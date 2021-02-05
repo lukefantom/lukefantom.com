@@ -16,7 +16,7 @@ export default function GridItem({
 }) {
   if (fullWidth) {
     return (
-      <Link href={`/posts/${link}`}>
+      <Link href={link ? `/posts/${link}` : ""}>
         <div
           className={cn(styles.gridItem, grow && styles.grow)}
           style={{ flex: "1 100%", backgroundColor: color }}
@@ -29,6 +29,30 @@ export default function GridItem({
               className={cn(utilStyles.borderCircle, styles.gridItemImage)}
             />
           )}
+          <div
+            style={{
+              borderBottom: "0.2em solid #e7c2b89e",
+              width: "4em",
+              alignSelf: "center",
+              margin: "0 auto 5px",
+            }}
+          ></div>
+          <div
+            style={{
+              borderBottom: "0.2em solid #e7c2b89e",
+              width: "4em",
+              alignSelf: "center",
+              margin: "0 auto 5px",
+            }}
+          ></div>
+          <div
+            style={{
+              borderBottom: "0.2em solid #e7c2b89e",
+              width: "4em",
+              alignSelf: "center",
+              margin: "0 auto 40px",
+            }}
+          ></div>
           <p className={cn(styles.gridItemText)}>{text}</p>
           {children}
         </div>

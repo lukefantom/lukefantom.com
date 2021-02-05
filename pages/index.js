@@ -36,7 +36,6 @@ export default function Home({ allPostsData }) {
           text={
             "I am a software developer, designer and music producer who recently graduated from the School of Code. I have a strong passion for creating content and collaborating with others, whether this be through writing, music or technology."
           }
-          link
           // image={"/images/profile.jpg"}
           fullWidth
         >
@@ -110,7 +109,6 @@ export default function Home({ allPostsData }) {
           title={"Come say hi..."}
           color={"#d08090ed"}
           text={"Email links and icons with links to social will go here"}
-          link
           fullWidth
         ></GridItem>
       </SectionContainer>
