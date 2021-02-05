@@ -5,23 +5,11 @@ import styles from "./navItems.module.css";
 import cn from "classnames";
 import { useTheme } from "next-themes";
 
-export default function renderNavigationItems() {
+export default function RenderNavigationItems({ setOpen }) {
   const { theme } = useTheme();
 
-  const linkClicked = (event) => {
-    if (event.currentTarget.href.indexOf("cv") > -1) {
-      document.querySelectorAll("nav li a").forEach((navEl) => {
-        navEl.classList.remove("active");
-      });
-    }
-
-    // if (width <= 768) {
-    //   toggleMobileNavigation();
-    // }git ad
-  };
-
   return (
-    <React.Fragment>
+    <>
       <li className="sm:mr-6 font-medium">
         <Link href={{ pathname: "/", hash: "personal" }}>
           <a
@@ -30,7 +18,7 @@ export default function renderNavigationItems() {
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
               styles.navText
             )}
-            onClick={linkClicked}
+            onClick={() => setOpen(false)}
           >
             Personal
           </a>
@@ -44,7 +32,7 @@ export default function renderNavigationItems() {
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
               styles.navText
             )}
-            onClick={linkClicked}
+            onClick={() => setOpen(false)}
           >
             Projects
           </a>
@@ -58,7 +46,7 @@ export default function renderNavigationItems() {
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
               styles.navText
             )}
-            onClick={linkClicked}
+            onClick={() => setOpen(false)}
           >
             Music
           </a>
@@ -72,12 +60,12 @@ export default function renderNavigationItems() {
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
               styles.navText
             )}
-            onClick={linkClicked}
+            onClick={() => setOpen(false)}
           >
             Contact
           </a>
         </Link>
       </li>
-    </React.Fragment>
+    </>
   );
 }

@@ -31,26 +31,10 @@ export default function GridItem({
           )}
           <div
             style={{
-              borderBottom: "0.2em solid #e7c2b89e",
+              borderBottom: "0.2em solid #2e465c",
               width: "4em",
               alignSelf: "center",
-              margin: "0 auto 5px",
-            }}
-          ></div>
-          <div
-            style={{
-              borderBottom: "0.2em solid #e7c2b89e",
-              width: "4em",
-              alignSelf: "center",
-              margin: "0 auto 5px",
-            }}
-          ></div>
-          <div
-            style={{
-              borderBottom: "0.2em solid #e7c2b89e",
-              width: "4em",
-              alignSelf: "center",
-              margin: "0 auto 40px",
+              margin: "0 auto 1.5rem",
             }}
           ></div>
           <p className={cn(styles.gridItemText)}>{text}</p>
