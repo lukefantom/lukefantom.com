@@ -35,7 +35,8 @@ export default function Home({ allPostsData }) {
       <SectionContainer sectionHeader={"Personal"} id={"personal"}>
         <GridItem
           title={"Hey there, I'm Luke 👋"}
-          color={"#408fa3"}
+          color={"#547f9c"}
+          fontColor={"#f5f5e8"}
           text={
             "I am a software developer, designer and music producer who recently graduated from the School of Code. I have a strong passion for creating content and collaborating with others, whether this be through writing, music or technology."
           }
@@ -46,7 +47,7 @@ export default function Home({ allPostsData }) {
           <HelloGraphic />
         </GridItem>
 
-        <GridItem color={"#ede7f6"} title={"About me..."}>
+        <GridItem color={"#f5efe0"} title={"About me..."}>
           <p className={gridStyles.gridItemText}>
             After several years working in the technology industry, mainly
             focusing on hardware support for companies such as WeWork and Apple,
@@ -68,9 +69,15 @@ export default function Home({ allPostsData }) {
         </GridItem>
 
         <GridItem
-          color={"#cfd8dc"}
+          color={"#f5efe0"}
           text={""}
           image={"/images/profile.jpg"}
+        ></GridItem>
+        <GridItem
+          fullWidth
+          title={"Some more text will go here"}
+          underline
+          color={"#d3dbd9"}
         ></GridItem>
       </SectionContainer>
 
@@ -78,13 +85,14 @@ export default function Home({ allPostsData }) {
       <SectionContainer sectionHeader={"Projects"} id={"projects"}>
         <GridItem
           color={"#3bab87"}
+          fontColor={"#f5f5e8"}
           fullWidth
           title={"Societly"}
           underline
           grow
           link={"https://societly.netlify.app/"}
         >
-          <p className={gridStyles.gridItemText}>
+          <p className={gridStyles.gridItemText} style={{ color: "#f5f5e8" }}>
             Keeping all bootcampers connected after the School of Code
           </p>
         </GridItem>

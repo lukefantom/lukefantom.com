@@ -9,7 +9,6 @@ import {
   faSpotify,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Tourdefrance() {
   return (
@@ -61,16 +60,6 @@ export default function Tourdefrance() {
         >
           <FontAwesomeIcon
             icon={faInstagram}
-            className={iconStyles.iconSmall}
-          />
-        </a>
-        <a
-          href={"https://soundcloud.com/tourdefrancemusic"}
-          rel="noreferrer"
-          target="_blank"
-        >
-          <FontAwesomeIcon
-            icon={faSoundcloud}
             className={iconStyles.iconSmall}
           />
         </a>
