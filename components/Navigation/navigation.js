@@ -18,7 +18,10 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="absolute dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0">
+    <nav
+      className="absolute dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0"
+      style={{ backgroundColor: open && "lightcoral" }}
+    >
       <div className="flex h-full container mx-auto justify-between items-center px-4 md:px-4">
         {/* -----------Site Logo------------- */}
         <Link href={{ pathname: "/" }}>
@@ -28,7 +31,11 @@ export default function Navigation() {
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
               utilStyles.titleSmall
             )}
-            style={{ fontWeight: 800, letterSpacing: "-0.05rem" }}
+            style={{
+              fontWeight: 800,
+              letterSpacing: "-0.05rem",
+              display: open ? "none" : "inline-block",
+            }}
           >
             <div className="letter inline-block top-0 relative">L</div>
             <div className="letter inline-block top-0 relative">u</div>
@@ -66,7 +73,12 @@ export default function Navigation() {
 
         {/* -----------Dark Mode------------- */}
 
-        <div className="order-3">
+        <div
+          className="order-3"
+          style={{
+            display: open ? "none" : "inline-block",
+          }}
+        >
           <ThemeChanger />
         </div>
       </div>

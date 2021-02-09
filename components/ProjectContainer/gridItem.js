@@ -13,22 +13,24 @@ export default function GridItem({
   children,
   image,
   grow,
+  underline,
 }) {
   if (fullWidth) {
     return (
-      <Link href={link ? `/posts/${link}` : ""}>
-        <div
-          className={cn(styles.gridItem, grow && styles.grow)}
-          style={{ flex: "1 100%", backgroundColor: color }}
-        >
-          <h3 className={cn(styles.gridItemHeader)}>{title}</h3>
-          {image && (
-            <img
-              src={image}
-              alt={title}
-              className={cn(utilStyles.borderCircle, styles.gridItemImage)}
-            />
-          )}
+      // <Link href={link ? link : "/"}>
+      <div
+        className={cn(styles.gridItem, grow && styles.grow)}
+        style={{ flex: "1 100%", backgroundColor: color }}
+      >
+        {title && <h3 className={cn(styles.gridItemHeader)}>{title}</h3>}
+        {image && (
+          <img
+            src={image}
+            alt={title}
+            className={cn(utilStyles.borderCircle, styles.gridItemImage)}
+          />
+        )}
+        {underline && (
           <div
             style={{
               borderBottom: "0.2em solid #2e465c",
@@ -37,24 +39,41 @@ export default function GridItem({
               margin: "0 auto 1.5rem",
             }}
           ></div>
-          <p className={cn(styles.gridItemText)}>{text}</p>
-          {children}
-        </div>
-      </Link>
+        )}
+        {text && <p className={cn(styles.gridItemText)}>{text}</p>}
+        {children}
+      </div>
+      // </Link>
     );
   }
 
   return (
-    <Link href={`/posts/${link}`}>
-      <div
-        className={cn(styles.gridItem, styles.grow)}
-        style={{ backgroundColor: color }}
-      >
-        <h3 className={cn(styles.gridItemHeader)}>{title}</h3>
-        <img />
-        <p className={cn(styles.gridItemText)}>{text}</p>
-        {children}
-      </div>
-    </Link>
+    // <Link href={link ? link : "/"}>
+    <div
+      className={cn(styles.gridItem, grow && styles.grow)}
+      style={{ backgroundColor: color }}
+    >
+      {title && <h3 className={cn(styles.gridItemHeader)}>{title}</h3>}
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          className={cn(utilStyles.borderCircle, styles.gridItemImage)}
+        />
+      )}
+      {underline && (
+        <div
+          style={{
+            borderBottom: "0.2em solid #2e465c",
+            width: "4em",
+            alignSelf: "center",
+            margin: "0 auto 1.5rem",
+          }}
+        ></div>
+      )}
+      {text && <p className={cn(styles.gridItemText)}>{text}</p>}
+      {children}
+    </div>
+    // </Link>
   );
 }
