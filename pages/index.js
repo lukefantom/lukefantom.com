@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Date from "../components/date";
 import utilStyles from "../styles/utils.module.css";
+import gridStyles from "../components/ProjectContainer/projectContainer.module.css";
 import cn from "classnames";
 import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
@@ -9,6 +10,8 @@ import { useTheme } from "next-themes";
 import SectionContainer from "../components/ProjectContainer/sectionContainer";
 import GridItem from "../components/ProjectContainer/gridItem";
 import HelloGraphic from "../graphics/helloGraphic";
+import ContactSection from "../components/Contact/contact";
+import MusicSection from "../components/Music/musicSection";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -38,68 +41,59 @@ export default function Home({ allPostsData }) {
           }
           // image={"/images/profile.jpg"}
           fullWidth
+          underline
         >
           <HelloGraphic />
         </GridItem>
+
+        <GridItem color={"#ede7f6"} title={"About me..."}>
+          <p className={gridStyles.gridItemText}>
+            After several years working in the technology industry, mainly
+            focusing on hardware support for companies such as WeWork and Apple,
+            I decided to take the leap and swap the toolkit for JavaScript and
+            join the{" "}
+            <a
+              href="https://www.schoolofcode.co.uk/"
+              target="_blank"
+              className={cn(
+                theme === "dark"
+                  ? utilStyles.anchorDark
+                  : utilStyles.anchorLight
+              )}
+            >
+              School of Code
+            </a>
+            .
+          </p>
+        </GridItem>
+
+        <GridItem
+          color={"#cfd8dc"}
+          text={""}
+          image={"/images/profile.jpg"}
+        ></GridItem>
       </SectionContainer>
 
       {/* ---------------------------------Projects Section--------------------------------- */}
       <SectionContainer sectionHeader={"Projects"} id={"projects"}>
-        {allPostsData.map(({ id, title, summary, color }, index) => {
-          if (index === 0 || index % 3 === 0) {
-            return (
-              <GridItem
-                key={id}
-                title={title}
-                color={color}
-                text={summary}
-                link={id}
-                grow
-                fullWidth
-              />
-            );
-          }
-          return (
-            <GridItem
-              key={id}
-              title={title}
-              color={color}
-              text={summary}
-              link={id}
-              grow
-            />
-          );
-        })}
+        <GridItem
+          color={"#3bab87"}
+          fullWidth
+          title={"Societly"}
+          underline
+          grow
+          link={"https://societly.netlify.app/"}
+        >
+          <p className={gridStyles.gridItemText}>
+            Keeping all bootcampers connected after the School of Code
+          </p>
+        </GridItem>
       </SectionContainer>
 
       {/* ---------------------------------Music Section--------------------------------- */}
 
       <SectionContainer sectionHeader={"Music"} id={"music"}>
-        {allPostsData.map(({ id, title, summary, color }, index) => {
-          if (index === 0 || index % 3 === 0) {
-            return (
-              <GridItem
-                key={id}
-                title={title}
-                color={color}
-                text={summary}
-                link={id}
-                fullWidth
-                grow
-              />
-            );
-          }
-          return (
-            <GridItem
-              key={id}
-              title={title}
-              color={color}
-              text={summary}
-              link={id}
-              grow
-            />
-          );
-        })}
+        <MusicSection />
       </SectionContainer>
 
       {/* ---------------------------------Contact Section--------------------------------- */}
@@ -108,9 +102,15 @@ export default function Home({ allPostsData }) {
         <GridItem
           title={"Come say hi..."}
           color={"#d08090ed"}
-          text={"Email links and icons with links to social will go here"}
           fullWidth
-        ></GridItem>
+          // underline
+          text={"Some supporting text here"}
+        >
+          <ContactSection />
+          <br />
+          <h3 className={utilStyles.boldText}>Luke Fantom</h3>
+          <h4>Birmingham, UK</h4>
+        </GridItem>
       </SectionContainer>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>

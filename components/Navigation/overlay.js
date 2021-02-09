@@ -17,7 +17,7 @@ export default function Overlay({ children, burger, changeBurger, open }) {
   }
 
   return (
-    <div onClick={() => changeBurger} className={styles.burgerContainer}>
+    <div onClick={() => changeBurger}>
       <Hamburger changeBurger={changeBurger} />
     </div>
   );
