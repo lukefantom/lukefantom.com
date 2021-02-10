@@ -70,7 +70,14 @@ export default function GridItem({
       className={cn(styles.gridItem, grow && styles.grow)}
       style={{ backgroundColor: color }}
     >
-      {title && <h3 className={cn(styles.gridItemHeader)}>{title}</h3>}
+      {title && (
+        <h3
+          className={cn(styles.gridItemHeader)}
+          style={{ color: fontColor && fontColor }}
+        >
+          {title}
+        </h3>
+      )}
       {image && (
         <img
           src={image}
@@ -81,14 +88,23 @@ export default function GridItem({
       {underline && (
         <div
           style={{
-            borderBottom: "0.2em solid #2e465c",
+            borderBottom: fontColor
+              ? `0.2em solid ${fontColor}`
+              : "0.2em solid #2e465c",
             width: "4em",
             alignSelf: "center",
             margin: "0 auto 1.5rem",
           }}
         ></div>
       )}
-      {text && <p className={cn(styles.gridItemText)}>{text}</p>}
+      {text && (
+        <p
+          className={cn(styles.gridItemText)}
+          style={{ color: fontColor && fontColor }}
+        >
+          {text}
+        </p>
+      )}
       {children}
     </div>
     // </Link>

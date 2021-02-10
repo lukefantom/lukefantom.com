@@ -1,40 +1,40 @@
-import Tourdefrance from "./tourdefrance";
-import Atlas from "./atlas";
-import CultureVillain from "./cultureVillain";
 import Link from "next/link";
 import utilStyles from "../../styles/utils.module.css";
+import Societly from "./societly";
+import SoCFM from "./socFm";
+import PokeGet from "./pokeGet";
 
-export default function MusicSection() {
+export default function ProjectSection() {
   return (
     <>
-      {/* --------tourdefrance------- */}
+      {/* --------Societly------- */}
       <a
-        href="https://soundcloud.com/tourdefrancemusic"
+        href="https://societly.netlify.app/"
         className={utilStyles.containerFlexFull}
         rel="noreferrer"
         target="_blank"
       >
-        <Tourdefrance />
+        <Societly />
       </a>
 
-      {/* --------Atlas------- */}
+      {/* --------SoC FM------- */}
       <a
-        href="https://soundcloud.com/at-las"
+        href="https://soc-fm.netlify.app/"
         className={utilStyles.containerFlexHalf}
         rel="noreferrer"
         target="_blank"
       >
-        <Atlas />
+        <SoCFM />
       </a>
 
-      {/* --------Culture Villain------- */}
+      {/* --------PokeGet------- */}
       <a
-        href="https://culturevillain.co.uk"
+        href="https://pokeget.netlify.app/"
         className={utilStyles.containerFlexHalf}
         rel="noreferrer"
         target="_blank"
       >
-        <CultureVillain />
+        <PokeGet />
       </a>
     </>
   );
