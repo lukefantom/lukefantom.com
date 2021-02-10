@@ -54,7 +54,6 @@
 
 .borderCircle {
   border-radius: 50%;
-  border: solid 0.35em #f5f5e8;
   padding: 0.4em;
 }
 
@@ -156,6 +155,10 @@
 .anchorDark:hover::before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+.anchorLarge {
+  font-size: 2.25rem;
 }
 
 .containerFlexHalf {

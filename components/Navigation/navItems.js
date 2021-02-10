@@ -5,7 +5,7 @@ import styles from "./navItems.module.css";
 import cn from "classnames";
 import { useTheme } from "next-themes";
 
-export default function RenderNavigationItems({ setOpen }) {
+export default function RenderNavigationItems({ setOpen, open }) {
   const { theme } = useTheme();
 
   return (
@@ -16,6 +16,8 @@ export default function RenderNavigationItems({ setOpen }) {
             className={cn(
               "relative",
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
+              open && utilStyles.anchorDark,
+              open && utilStyles.anchorLarge,
               styles.navText
             )}
             onClick={() => setOpen(false)}
@@ -30,6 +32,8 @@ export default function RenderNavigationItems({ setOpen }) {
             className={cn(
               "relative",
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
+              open && utilStyles.anchorDark,
+              open && utilStyles.anchorLarge,
               styles.navText
             )}
             onClick={() => setOpen(false)}
@@ -44,6 +48,8 @@ export default function RenderNavigationItems({ setOpen }) {
             className={cn(
               "relative",
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
+              open && utilStyles.anchorDark,
+              open && utilStyles.anchorLarge,
               styles.navText
             )}
             onClick={() => setOpen(false)}
@@ -58,6 +64,8 @@ export default function RenderNavigationItems({ setOpen }) {
             className={cn(
               "relative",
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
+              open && utilStyles.anchorDark,
+              open && utilStyles.anchorLarge,
               styles.navText
             )}
             onClick={() => setOpen(false)}

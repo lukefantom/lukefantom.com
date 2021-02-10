@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import utilStyles from "../../styles/utils.module.css";
+import styles from "./navItems.module.css";
 import cn from "classnames";
 import RenderNavigationItems from "./navItems";
 import Overlay from "./overlay";
@@ -20,7 +21,7 @@ export default function Navigation() {
   return (
     <nav
       className="absolute dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0"
-      style={{ backgroundColor: open && "#d3dbd9" }}
+      style={{ backgroundColor: open && "#596869" }}
     >
       <div className="flex h-full container mx-auto justify-between items-center px-4 md:px-4">
         {/* -----------Site Logo------------- */}
@@ -65,8 +66,8 @@ export default function Navigation() {
 
         <div className="order-1 md:hidden">
           <Overlay burger={burger} changeBurger={changeBurger} open={open}>
-            <ul>
-              <RenderNavigationItems setOpen={setOpen} />
+            <ul className={cn(open && styles.mobileBorder)}>
+              <RenderNavigationItems setOpen={setOpen} open={open} />
             </ul>
           </Overlay>
         </div>
