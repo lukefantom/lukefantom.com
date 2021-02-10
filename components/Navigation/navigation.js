@@ -20,7 +20,7 @@ export default function Navigation() {
   return (
     <nav
       className="absolute dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0"
-      style={{ backgroundColor: open && "lightcoral" }}
+      style={{ backgroundColor: open && "#d3dbd9" }}
     >
       <div className="flex h-full container mx-auto justify-between items-center px-4 md:px-4">
         {/* -----------Site Logo------------- */}

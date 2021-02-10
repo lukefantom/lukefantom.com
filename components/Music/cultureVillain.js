@@ -15,12 +15,12 @@ export default function CultureVillain() {
   return (
     <GridItem
       color={"#f5efe0"}
+      fontColor={"#2e465c"}
       title={"Culture Villain"}
       underline
-      grow
       link={"https://culturevillain.co.uk"}
     >
-      <p className={cn(styles.gridItemText)}>
+      <p className={cn(styles.gridItemText)} style={{ color: "#2e465c" }}>
         Co-founder of alternative music blog Culture Villain, building a network
         of followers and reaching an average of 1k views per month. Covered
         major festivals events across Europe including Dimensions Festival,

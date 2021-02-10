@@ -158,6 +158,22 @@
   transform: scaleX(1);
 }
 
+.containerFlexHalf {
+  display: flex;
+  flex: 1 50%;
+}
+
+.containerFlexFull {
+  display: flex;
+  flex: 1 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .containerFlexHalf {
+    flex: 1 100%;
+  }
+}
+
 /* ---------Break Points--------- */
 
 /* Small devices */

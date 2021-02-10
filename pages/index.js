@@ -3,6 +3,7 @@ import Link from "next/link";
 import Date from "../components/date";
 import utilStyles from "../styles/utils.module.css";
 import gridStyles from "../components/ProjectContainer/projectContainer.module.css";
+import iconStyles from "../components/Contact/contact.module.css";
 import cn from "classnames";
 import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
@@ -12,6 +13,9 @@ import GridItem from "../components/ProjectContainer/gridItem";
 import HelloGraphic from "../graphics/helloGraphic";
 import ContactSection from "../components/Contact/contact";
 import MusicSection from "../components/Music/musicSection";
+import ProjectSection from "../components/Projects/projectSection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -34,8 +38,9 @@ export default function Home({ allPostsData }) {
 
       <SectionContainer sectionHeader={"Personal"} id={"personal"}>
         <GridItem
-          title={"Hey there, I'm Luke 👋"}
-          color={"#408fa3"}
+          title={"Hey there, I'm Luke."}
+          color={"#547f9c"}
+          fontColor={"#f5f5e8"}
           text={
             "I am a software developer, designer and music producer who recently graduated from the School of Code. I have a strong passion for creating content and collaborating with others, whether this be through writing, music or technology."
           }
@@ -46,8 +51,8 @@ export default function Home({ allPostsData }) {
           <HelloGraphic />
         </GridItem>
 
-        <GridItem color={"#ede7f6"} title={"About me..."}>
-          <p className={gridStyles.gridItemText}>
+        <GridItem color={"#f5efe0"} title={"About me..."} fontColor={"#2e465c"}>
+          <p className={gridStyles.gridItemText} style={{ color: "#2e465c" }}>
             After several years working in the technology industry, mainly
             focusing on hardware support for companies such as WeWork and Apple,
             I decided to take the leap and swap the toolkit for JavaScript and
@@ -68,26 +73,42 @@ export default function Home({ allPostsData }) {
         </GridItem>
 
         <GridItem
-          color={"#cfd8dc"}
+          color={"#f5efe0"}
           text={""}
           image={"/images/profile.jpg"}
         ></GridItem>
+        <GridItem
+          fullWidth
+          title={"Some more text will go here"}
+          underline
+          color={"#d3dbd9"}
+          fontColor={"#2e465c"}
+        >
+          <p className={gridStyles.gridItemText} style={{ color: "#2e465c" }}>
+            I'm a keen hiker and love travelling. After moving to Vancouver for
+            two years in 2017, I fell in love with the city and spent the latter
+            half of 2018 building a camper van and travelling around North
+            America with my girlfriend. We visited over 20 National Parks and
+            learnt much more than we ever anticipated. Check out my Instagram
+            for more!
+          </p>
+          <a
+            href={"https://www.instagram.com/lukefantom/"}
+            rel="noreferrer"
+            target="_blank"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className={iconStyles.iconSmall}
+            />
+          </a>
+        </GridItem>
       </SectionContainer>
 
       {/* ---------------------------------Projects Section--------------------------------- */}
       <SectionContainer sectionHeader={"Projects"} id={"projects"}>
-        <GridItem
-          color={"#3bab87"}
-          fullWidth
-          title={"Societly"}
-          underline
-          grow
-          link={"https://societly.netlify.app/"}
-        >
-          <p className={gridStyles.gridItemText}>
-            Keeping all bootcampers connected after the School of Code
-          </p>
-        </GridItem>
+        <ProjectSection />
       </SectionContainer>
 
       {/* ---------------------------------Music Section--------------------------------- */}
