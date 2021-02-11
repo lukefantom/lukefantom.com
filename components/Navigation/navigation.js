@@ -13,6 +13,13 @@ export default function Navigation() {
   const [burger, setBurger] = useState("");
   const [open, setOpen] = useState(false);
 
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
   useEffect(() => {
     const body = document.querySelector("body");
     open
@@ -34,6 +41,9 @@ export default function Navigation() {
   }, [open]);
 
   function changeBurger() {
+    if (!open) {
+      scrollToTop();
+    }
     burger === undefined ? setBurger("is-active") : setBurger("");
     setOpen(!open);
   }
