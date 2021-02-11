@@ -11,7 +11,7 @@
 
 .titleSmall {
   font-family: "Playfair Display", serif;
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   line-height: 1.15;
   font-weight: 800;
   letter-spacing: -0.05rem;
@@ -184,14 +184,5 @@
 @media only screen and (max-width: 600px) {
   .headingXl {
     font-size: 6vw;
-  }
-  .titleSmall {
-    font-size: 1.3rem;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .titleSmall {
-    font-size: 1.2rem;
   }
 }

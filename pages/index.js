@@ -28,6 +28,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   const { theme } = useTheme();
+
   return (
     <Layout home>
       <Head>
@@ -44,7 +45,6 @@ export default function Home({ allPostsData }) {
           text={
             "I am a software developer, designer and music producer who recently graduated from the School of Code. I have a strong passion for creating content and collaborating with others, whether this be through writing, music or technology."
           }
-          // image={"/images/profile.jpg"}
           fullWidth
           underline
         >
@@ -60,11 +60,7 @@ export default function Home({ allPostsData }) {
             <a
               href="https://www.schoolofcode.co.uk/"
               target="_blank"
-              className={cn(
-                theme === "dark"
-                  ? utilStyles.anchorDark
-                  : utilStyles.anchorLight
-              )}
+              className={cn(utilStyles.anchorLight)}
             >
               School of Code
             </a>
@@ -76,7 +72,8 @@ export default function Home({ allPostsData }) {
           color={"#f5efe0"}
           text={""}
           image={"/images/profile.jpg"}
-        ></GridItem>
+          hide
+        />
         <GridItem
           fullWidth
           title={"Some more text will go here"}
