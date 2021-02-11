@@ -1,5 +1,5 @@
 import ThemeChanger from "../theme";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import utilStyles from "../../styles/utils.module.css";
@@ -13,6 +13,26 @@ export default function Navigation() {
   const [burger, setBurger] = useState("");
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    const body = document.querySelector("body");
+    open
+      ? body.classList.add("preventScroll")
+      : body.classList.remove("preventScroll");
+
+    function handleResize() {
+      let width = window.innerWidth;
+      if (width > 767) {
+        setOpen(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [open]);
+
   function changeBurger() {
     burger === undefined ? setBurger("is-active") : setBurger("");
     setOpen(!open);
@@ -21,7 +41,7 @@ export default function Navigation() {
   return (
     <nav
       className="absolute dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0"
-      style={{ backgroundColor: open && "#596869" }}
+      style={{ backgroundColor: open && "#4e7a80" }}
     >
       <div className="flex h-full container mx-auto justify-between items-center px-4 md:px-4">
         {/* -----------Site Logo------------- */}

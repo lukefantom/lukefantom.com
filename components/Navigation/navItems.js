@@ -10,7 +10,7 @@ export default function RenderNavigationItems({ setOpen, open }) {
 
   return (
     <>
-      <li className="sm:mr-6 font-medium">
+      <li className={cn("sm:mr-6 font-medium", open && styles.marginNav)}>
         <Link href={{ pathname: "/", hash: "personal" }}>
           <a
             className={cn(
@@ -26,7 +26,7 @@ export default function RenderNavigationItems({ setOpen, open }) {
           </a>
         </Link>
       </li>
-      <li className="sm:mr-6 font-medium">
+      <li className={cn("sm:mr-6 font-medium", open && styles.marginNav)}>
         <Link href={{ pathname: "/", hash: "projects" }}>
           <a
             className={cn(
@@ -42,7 +42,7 @@ export default function RenderNavigationItems({ setOpen, open }) {
           </a>
         </Link>
       </li>
-      <li className="sm:mr-6 font-medium">
+      <li className={cn("sm:mr-6 font-medium", open && styles.marginNav)}>
         <Link href={{ pathname: "/", hash: "music" }}>
           <a
             className={cn(
@@ -58,7 +58,7 @@ export default function RenderNavigationItems({ setOpen, open }) {
           </a>
         </Link>
       </li>
-      <li className="sm:mr-6 font-medium">
+      <li className={cn("sm:mr-6 font-medium", open && styles.marginNav)}>
         <Link href={{ pathname: "/", hash: "contact" }}>
           <a
             className={cn(
