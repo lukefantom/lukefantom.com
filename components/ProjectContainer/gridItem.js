@@ -9,19 +9,25 @@ export default function GridItem({
   fullWidth,
   title,
   text,
-  link,
   children,
   image,
   grow,
   underline,
   fontColor,
+  hide,
 }) {
   if (fullWidth) {
     return (
-      // <Link href={link ? link : "/"}>
       <div
-        className={cn(styles.gridItem, grow && styles.grow)}
-        style={{ flex: "1 100%", backgroundColor: color }}
+        className={cn(
+          styles.gridItem,
+          grow && styles.grow,
+          hide && styles.hide
+        )}
+        style={{
+          flex: "1 100%",
+          backgroundColor: color,
+        }}
       >
         {title && (
           <h3
@@ -60,14 +66,12 @@ export default function GridItem({
         )}
         {children}
       </div>
-      // </Link>
     );
   }
 
   return (
-    // <Link href={link ? link : "/"}>
     <div
-      className={cn(styles.gridItem, grow && styles.grow)}
+      className={cn(styles.gridItem, grow && styles.grow, hide && styles.hide)}
       style={{ backgroundColor: color }}
     >
       {title && (
@@ -107,6 +111,5 @@ export default function GridItem({
       )}
       {children}
     </div>
-    // </Link>
   );
 }

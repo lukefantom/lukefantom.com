@@ -14,6 +14,10 @@
   padding: 1rem;
 }
 
+.navPadding {
+  padding: 0 1rem;
+}
+
 @media only screen and (max-width: 770px) {
   .mobileBorder {
     margin-top: 0;
@@ -24,8 +28,11 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 414px) {
   .mobileBorder {
     margin-top: 2rem;
+  }
+  .navPadding {
+    padding: 0;
   }
 }

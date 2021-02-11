@@ -447,7 +447,7 @@
      * Elastic
      */
 .hamburger--elastic .hamburgerInner {
-  top: 2px;
+  top: 0px;
   transition-duration: 0.275s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -477,7 +477,7 @@
      * Elastic Reverse
      */
 .hamburger--elastic-r .hamburgerInner {
-  top: 2px;
+  top: 0px;
   transition-duration: 0.275s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -609,7 +609,7 @@
      * Slider
      */
 .hamburger--slider .hamburgerInner {
-  top: 2px;
+  top: 0px;
 }
 .hamburger--slider .hamburgerInner::before {
   top: 10px;
@@ -636,7 +636,7 @@
      * Slider Reverse
      */
 .hamburger--slider-r .hamburgerInner {
-  top: 2px;
+  top: 0px;
 }
 .hamburger--slider-r .hamburgerInner::before {
   top: 10px;
@@ -727,7 +727,7 @@
      * Spring
      */
 .hamburgerSpring .hamburgerInner {
-  top: 2px;
+  top: 0px;
   transition: background-color 0s 0.13s linear;
 }
 .hamburgerSpring .hamburgerInner::before {

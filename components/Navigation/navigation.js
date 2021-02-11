@@ -53,7 +53,12 @@ export default function Navigation() {
       className="absolute dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0"
       style={{ backgroundColor: open && "#4e7a80" }}
     >
-      <div className="flex h-full container mx-auto justify-between items-center px-4 md:px-4">
+      <div
+        className={cn(
+          "flex h-full container mx-auto justify-between items-center",
+          styles.navPadding
+        )}
+      >
         {/* -----------Site Logo------------- */}
         <Link href={{ pathname: "/" }}>
           <a
