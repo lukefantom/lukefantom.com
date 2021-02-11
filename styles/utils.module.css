@@ -186,6 +186,12 @@
     font-size: 6vw;
   }
   .titleSmall {
-    font-size: 4.5vw;
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .titleSmall {
+    font-size: 1.2rem;
   }
 }

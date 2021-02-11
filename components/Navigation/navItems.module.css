@@ -12,5 +12,20 @@
   border-top: 0.25rem solid #2e465c;
   border-bottom: 0.25rem solid #2e465c;
   padding: 1rem;
-  margin-top: 4vw;
+}
+
+@media only screen and (max-width: 770px) {
+  .mobileBorder {
+    margin-top: 0;
+  }
+  .marginNav {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .mobileBorder {
+    margin-top: 2rem;
+  }
 }
