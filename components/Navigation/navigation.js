@@ -101,7 +101,7 @@ export default function Navigation() {
 
         <div className="order-1 md:hidden">
           <Overlay burger={burger} changeBurger={changeBurger} open={open}>
-            <ul className={cn(open && styles.mobileBorder)}>
+            <ul>
               <RenderNavigationItems setOpen={setOpen} open={open} />
             </ul>
           </Overlay>

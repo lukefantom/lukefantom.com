@@ -2,7 +2,7 @@ import GridItem from "../ProjectContainer/gridItem";
 import styles from "../ProjectContainer/projectContainer.module.css";
 import cn from "classnames";
 
-export default function Tourdefrance() {
+export default function Societly() {
   return (
     <GridItem
       color={"#3bab87"}

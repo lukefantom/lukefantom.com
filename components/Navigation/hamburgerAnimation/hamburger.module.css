@@ -6,44 +6,40 @@
  * @link https://github.com/jonsuh/hamburgers
  */
 
-.burgerIconLight {
-  border-bottom: 0.2em solid #2e465ce0;
-  width: 2em;
-  align-self: center;
-  margin: 5px auto 5px;
-}
-.burgerIconDark {
-  border-bottom: 0.2em solid #f5f5e8b2;
-  width: 2em;
-  align-self: center;
-  margin: 5px auto 5px;
-}
-
 .hamburger {
-  padding: 0.75rem;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
   transition-timing-function: linear;
   font: inherit;
-  color: inherit;
   text-transform: none;
   background-color: transparent;
   border: 0;
   margin-top: 0.75rem;
   overflow: visible;
 }
-.hamburger:hover {
-  opacity: 0.9;
+
+.hamburgerLight {
+  color: inherit;
 }
+
+.hamburgerDark {
+  color: inherit;
+}
+
 .hamburger.isActive:hover {
   opacity: 0.9;
 }
-.hamburger.isActive .hamburgerInner,
-.hamburger.isActive .hamburgerInner::before,
-.hamburger.isActive .hamburgerInner::after {
+.hamburgerLight.isActive .hamburgerInnerLight,
+.hamburgerLight.isActive .hamburgerInnerLight::before,
+.hamburgerLight.isActive .hamburgerInnerLight::after {
   background-color: #2e465c;
+}
+.hamburgerDark.isActive .hamburgerInnerDark,
+.hamburgerDark.isActive .hamburgerInnerDark::before,
+.hamburgerDark.isActive .hamburgerInnerDark::after {
+  background-color: #f5f5e8;
 }
 
 .hamburgerBox {
@@ -63,13 +59,24 @@
 .hamburgerInner::after {
   width: 40px;
   height: 4px;
-  background-color: #2e465c;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
   transition-duration: 0.15s;
   transition-timing-function: ease;
 }
+
+.hamburgerInnerLight,
+.hamburgerInnerLight::before,
+.hamburgerInnerLight::after {
+  background-color: #2e465c;
+}
+.hamburgerInnerDark,
+.hamburgerInnerDark::before,
+.hamburgerInnerDark::after {
+  background-color: #f5f5e8;
+}
+
 .hamburgerInner::before,
 .hamburgerInner::after {
   content: "";

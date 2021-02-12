@@ -3,6 +3,7 @@ import utilStyles from "../../styles/utils.module.css";
 import Societly from "./societly";
 import SoCFM from "./socFm";
 import PokeGet from "./pokeGet";
+import SchoolOfCode from "./schoolOfCode";
 
 export default function ProjectSection() {
   return (
@@ -35,6 +36,16 @@ export default function ProjectSection() {
         target="_blank"
       >
         <PokeGet />
+      </a>
+
+      {/* --------School of Code------- */}
+      <a
+        href="https://schoolofcode.com/"
+        className={utilStyles.containerFlexHalf}
+        rel="noreferrer"
+        target="_blank"
+      >
+        <SchoolOfCode />
       </a>
     </>
   );
