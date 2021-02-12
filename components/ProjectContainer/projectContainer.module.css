@@ -20,6 +20,10 @@
   /* color: #fff; */
 }
 
+.darkModeIcon {
+  width: 1.3rem;
+}
+
 .sectionHeader {
   /* font-family: Inter,Source Sans Pro,Helvetica Neue,Arial,sans-serif; */
   font-size: 6.5rem;
@@ -101,14 +105,11 @@
   z-index: 5;
 }
 
-/* .grow:after {
-  z-index: 1;
-  transition: 2s all;
-} */
-
-.grow:hover:after {
-  /* z-index: 1; */
-  /* transition-delay: 2s; */
+.growButton:active {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  z-index: 5;
 }
 
 /* Medium devices */
@@ -133,7 +134,6 @@
   }
 }
 
-/* XSmall devices */
 @media only screen and (max-width: 800px) {
   .sectionHeader {
     font-size: 12vw;
@@ -141,5 +141,12 @@
   .gridItemHeader {
     font-size: 8vw;
     max-width: 80%;
+  }
+}
+
+/* XSmall devices */
+@media only screen and (max-width: 414px) {
+  .darkModeIcon {
+    width: 1rem;
   }
 }

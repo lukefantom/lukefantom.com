@@ -10,6 +10,7 @@ export default function Hamburger({ burger, changeBurger }) {
     <button
       className={cn(
         styles.hamburger,
+        theme === "dark" ? styles.hamburgerDark : styles.hamburgerLight,
         styles.hamburgerSpring,
         burger === undefined ? "" : styles.isActive
       )}
@@ -19,7 +20,12 @@ export default function Hamburger({ burger, changeBurger }) {
     >
       <span className={styles.hamburgerBox}>
         <span
-          className={styles.hamburgerInner}
+          className={cn(
+            styles.hamburgerInner,
+            theme === "dark"
+              ? styles.hamburgerInnerDark
+              : styles.hamburgerInnerLight
+          )}
           //   style={{ backgroundColor: theme === "dark" ? "white" : "black" }}
         ></span>
       </span>

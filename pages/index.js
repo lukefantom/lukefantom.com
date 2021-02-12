@@ -51,12 +51,15 @@ export default function Home({ allPostsData }) {
           <HelloGraphic />
         </GridItem>
 
-        <GridItem color={"#f5efe0"} title={"About me..."} fontColor={"#2e465c"}>
+        <GridItem
+          color={"#f5efe0"}
+          title={"I used to fix computers"}
+          fontColor={"#2e465c"}
+        >
           <p className={gridStyles.gridItemText} style={{ color: "#2e465c" }}>
-            After several years working in the technology industry, mainly
-            focusing on hardware support for companies such as WeWork and Apple,
-            I decided to take the leap and swap the toolkit for JavaScript and
-            join the{" "}
+            After several years working in technology, mainly focusing on
+            hardware support for companies such as WeWork and Apple, I decided
+            to take the leap and swap the toolkit for JavaScript and join the{" "}
             <a
               href="https://www.schoolofcode.co.uk/"
               target="_blank"
@@ -76,18 +79,17 @@ export default function Home({ allPostsData }) {
         />
         <GridItem
           fullWidth
-          title={"Some more text will go here"}
+          title={"I'm a keen hiker and love travelling..."}
           underline
           color={"#d3dbd9"}
           fontColor={"#2e465c"}
         >
           <p className={gridStyles.gridItemText} style={{ color: "#2e465c" }}>
-            I'm a keen hiker and love travelling. After moving to Vancouver for
-            two years in 2017, I fell in love with the city and spent the latter
-            half of 2018 building a camper van and travelling around North
-            America with my girlfriend. We visited over 20 National Parks and
-            learnt much more than we ever anticipated. Check out my Instagram
-            for more!
+            After moving to Vancouver for two years in 2017, I fell in love with
+            the city and spent the latter half of 2018 building a camper van and
+            travelling around North America with my girlfriend. We visited over
+            20 National Parks and learnt much more than we ever anticipated.
+            Check out my Instagram for more!
           </p>
           <a
             href={"https://www.instagram.com/lukefantom/"}
@@ -122,7 +124,9 @@ export default function Home({ allPostsData }) {
           color={"#d08090ed"}
           fullWidth
           // underline
-          text={"Some supporting text here"}
+          text={
+            "I'm always looking for new projects and ideas, reach out via Email, LinkedIn or check out my Github for more information on my previous work"
+          }
         >
           <ContactSection />
           <br />
