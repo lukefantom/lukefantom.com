@@ -24,6 +24,13 @@
   width: 1.3rem;
 }
 
+.rotateHorizontal {
+  transform: rotate(180deg);
+}
+
+.rotateVertical {
+  transform: rotateY(180deg);
+}
 .sectionHeader {
   /* font-family: Inter,Source Sans Pro,Helvetica Neue,Arial,sans-serif; */
   font-size: 6.5rem;

@@ -34,11 +34,14 @@ const ThemeChanger = () => {
         }}
       >
         {theme === "dark" ? (
-          <FontAwesomeIcon icon={fasMoon} className={styles.darkModeIcon} />
+          <FontAwesomeIcon
+            icon={fasMoon}
+            className={cn(styles.darkModeIcon, styles.rotateVertical)}
+          />
         ) : (
           <FontAwesomeIcon
             icon={farLightbulb}
-            className={styles.darkModeIcon}
+            className={cn(styles.darkModeIcon, styles.rotateHorizontal)}
           />
         )}
         {/* </svg> */}

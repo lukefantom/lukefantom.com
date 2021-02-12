@@ -13,12 +13,14 @@
 }
 .iconSmall {
   width: 1.5rem;
+  height: auto;
   margin: 0 0.5rem;
   color: #2e465cde;
   transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .iconTech {
   width: 1.5rem;
+  height: auto;
   margin: 0 0.5rem;
   color: #2e465cde;
   transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);

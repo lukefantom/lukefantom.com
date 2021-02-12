@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import LogoBackground from "../graphics/logoBackground";
 
 const name = "Luke Fantom";
-export const siteTitle = "Luke Fantom Portfolio";
+export const siteTitle = "Luke Fantom";
 
 export default function Layout({ children, home }) {
   const { theme } = useTheme();

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Date from "../components/date";
+import { DateTime } from "luxon";
 import utilStyles from "../styles/utils.module.css";
 import gridStyles from "../components/ProjectContainer/projectContainer.module.css";
 import iconStyles from "../components/Contact/contact.module.css";
@@ -125,13 +125,15 @@ export default function Home({ allPostsData }) {
           fullWidth
           // underline
           text={
-            "I'm always looking for new projects and ideas, reach out via Email, LinkedIn or check out my Github for more information on my previous work"
+            "I'm always looking for new projects and ideas. Reach out via Email, LinkedIn or check out my Github for more information on my previous work."
           }
         >
           <ContactSection />
           <br />
-          <h3 className={utilStyles.boldText}>Luke Fantom</h3>
-          <h4>Birmingham, UK</h4>
+          <h3 className={utilStyles.boldText}>Built by Me ✌🏼</h3>
+          <h3 className={utilStyles.boldText}>
+            Luke Fantom © {DateTime.local().year}
+          </h3>
         </GridItem>
       </SectionContainer>
 
