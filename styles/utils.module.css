@@ -49,7 +49,9 @@
 
 .boldText {
   font-weight: 500;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.5px;
+  font-size: 0.6rem;
+  color: #384a5a;
 }
 
 .borderCircle {

@@ -25,7 +25,7 @@ export default function Tourdefrance() {
         <iframe
           style={{
             border: 0,
-            width: "50%",
+            width: "auto",
             height: "auto",
             marginBottom: "1rem",
           }}
