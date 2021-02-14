@@ -52,6 +52,15 @@
   letter-spacing: -0.5px;
   font-size: 0.6rem;
   color: #384a5a;
+  line-height: 1.2;
+}
+
+.boldTextLight {
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  font-size: 0.6rem;
+  color: #f5f5e8;
+  line-height: 1.2;
 }
 
 .borderCircle {
@@ -164,6 +173,19 @@
   margin: 2rem;
 }
 
+.anchorFade1 {
+  animation: gradualOpacity 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.anchorFade2 {
+  animation: gradualOpacity 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.anchorFade3 {
+  animation: gradualOpacity 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.anchorFade4 {
+  animation: gradualOpacity 2.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
 .containerFlexHalf {
   display: flex;
   flex: 1 50%;
@@ -186,5 +208,26 @@
 @media only screen and (max-width: 600px) {
   .headingXl {
     font-size: 6vw;
+  }
+}
+
+/* -------------Animations--------------- */
+
+@-webkit-keyframes gradualOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+/* Standard syntax */
+@keyframes gradualOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
   }
 }

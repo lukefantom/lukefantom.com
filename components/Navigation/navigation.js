@@ -7,6 +7,7 @@ import styles from "./navItems.module.css";
 import cn from "classnames";
 import RenderNavigationItems from "./navItems";
 import Overlay from "./overlay";
+import { DateTime } from "luxon";
 
 export default function Navigation() {
   const { theme } = useTheme();
@@ -51,7 +52,7 @@ export default function Navigation() {
   return (
     <nav
       className="absolute dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0"
-      style={{ backgroundColor: open && "#4e7a80" }}
+      style={{ backgroundColor: open && theme === "light" && "#4e7a80" }}
     >
       <div
         className={cn(
@@ -104,6 +105,21 @@ export default function Navigation() {
             <ul>
               <RenderNavigationItems setOpen={setOpen} open={open} />
             </ul>
+            <div className="flex flex-col items-center mt-24">
+              {/* <h3
+                className={cn(utilStyles.boldTextLight, utilStyles.anchorFade4)}
+              >
+                Built by Me ✌🏼
+              </h3> */}
+              <h3
+                className={cn(utilStyles.boldTextLight, utilStyles.anchorFade4)}
+                style={{
+                  borderBottom: "0.22em solid #e7c2b8",
+                }}
+              >
+                Luke Fantom © {DateTime.local().year}
+              </h3>
+            </div>
           </Overlay>
         </div>
 

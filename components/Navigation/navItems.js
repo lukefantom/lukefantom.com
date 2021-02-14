@@ -18,6 +18,7 @@ export default function RenderNavigationItems({ setOpen, open }) {
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
               open && utilStyles.anchorDark,
               open && utilStyles.anchorLarge,
+              open && utilStyles.anchorFade1,
               styles.navText
             )}
             onClick={() => setOpen(false)}
@@ -34,6 +35,7 @@ export default function RenderNavigationItems({ setOpen, open }) {
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
               open && utilStyles.anchorDark,
               open && utilStyles.anchorLarge,
+              open && utilStyles.anchorFade2,
               styles.navText
             )}
             onClick={() => setOpen(false)}
@@ -50,6 +52,7 @@ export default function RenderNavigationItems({ setOpen, open }) {
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
               open && utilStyles.anchorDark,
               open && utilStyles.anchorLarge,
+              open && utilStyles.anchorFade3,
               styles.navText
             )}
             onClick={() => setOpen(false)}
@@ -66,6 +69,7 @@ export default function RenderNavigationItems({ setOpen, open }) {
               theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
               open && utilStyles.anchorDark,
               open && utilStyles.anchorLarge,
+              open && utilStyles.anchorFade4,
               styles.navText
             )}
             onClick={() => setOpen(false)}
