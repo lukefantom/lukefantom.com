@@ -10,9 +10,16 @@
   z-index: 100;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.8); */
-  background-color: #4e7a80;
   overflow: auto;
+  text-align: center;
+}
+
+.overlayLight {
+  background-color: #4e7a80;
+}
+
+.overlayDark {
+  background-color: #1f2937;
 }
 
 /* .burgerIconLight {

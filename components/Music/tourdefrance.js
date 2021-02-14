@@ -21,7 +21,7 @@ export default function Tourdefrance() {
         afro-house, taking inspiration from hip-hop and jazz.
       </p>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className={styles.mediaPlayer}>
         <iframe
           style={{
             border: 0,
