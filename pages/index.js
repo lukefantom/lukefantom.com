@@ -11,6 +11,7 @@ import { useTheme } from "next-themes";
 import SectionContainer from "../components/ProjectContainer/sectionContainer";
 import GridItem from "../components/ProjectContainer/gridItem";
 import HelloGraphic from "../graphics/helloGraphic";
+import Camper from "../graphics/camper";
 import ContactSection from "../components/Contact/contact";
 import MusicSection from "../components/Music/musicSection";
 import ProjectSection from "../components/Projects/projectSection";
@@ -43,7 +44,7 @@ export default function Home({ allPostsData }) {
           color={"#547f9c"}
           fontColor={"#f5f5e8"}
           text={
-            "I am a software developer, designer and music producer who recently graduated from the School of Code. I have a strong passion for creating content and collaborating with others, whether this be through writing, music or technology."
+            "I am a software developer, designer and music producer who recently graduated from the School of Code. I have a strong passion for problem solving, creating great content and collaborating with others, whether this be through writing, music or more recently code!"
           }
           fullWidth
           underline
@@ -58,8 +59,8 @@ export default function Home({ allPostsData }) {
         >
           <p className={gridStyles.gridItemText} style={{ color: "#2e465c" }}>
             After several years working in technology, mainly focusing on
-            hardware support for companies such as WeWork and Apple, I decided
-            to take the leap and swap the toolkit for JavaScript and join the{" "}
+            hardware support, I recently decided to take the leap and swap the
+            toolkit for JavaScript and join the{" "}
             <a
               href="https://www.schoolofcode.co.uk/"
               target="_blank"
@@ -95,13 +96,18 @@ export default function Home({ allPostsData }) {
             href={"https://www.instagram.com/lukefantom/"}
             rel="noreferrer"
             target="_blank"
-            style={{ display: "flex", justifyContent: "center" }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+            className={iconStyles.flexMargin}
           >
             <FontAwesomeIcon
               icon={faInstagram}
               className={iconStyles.iconSmall}
             />
           </a>
+          <Camper />
         </GridItem>
       </SectionContainer>
 
