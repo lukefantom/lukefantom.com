@@ -35,3 +35,25 @@
     transform: translate(0, -0px);
   }
 }
+
+.camper {
+  margin-left: 60px;
+  position: absolute;
+  width: 50%;
+  top: 25%;
+}
+
+@media only screen and (max-width: 800px) {
+  .camper {
+    margin-left: 100px;
+    top: 30%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .camper {
+    top: 30%;
+    width: 60%;
+    margin-left: 60px;
+  }
+}
