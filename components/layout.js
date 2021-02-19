@@ -51,7 +51,7 @@ export default function Layout({ children, home }) {
                     right: "100%",
                     // color: "#2e465c",
                     lineHeight: 0.8,
-                    fontSize: "calc(20px + 8vw)",
+                    // fontSize: "calc(20px + 8vw)",
                   }}
                 >
                   {name}

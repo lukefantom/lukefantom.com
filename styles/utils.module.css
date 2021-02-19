@@ -2,7 +2,7 @@
 
 .title {
   font-family: "Playfair Display", serif;
-  font-size: 6.5rem;
+  font-size: 9rem;
   line-height: 1.15;
   font-weight: 800;
   letter-spacing: -0.05rem;
@@ -204,13 +204,36 @@
 
 /* ---------Break Points--------- */
 
-/* Small devices */
+@media only screen and (max-width: 1200px) {
+  .title {
+    font-size: calc(20px + 12vw);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .title {
+    font-size: calc(20px + 11vw);
+  }
+}
 @media only screen and (max-width: 600px) {
+  .title {
+    font-size: calc(20px + 10vw);
+  }
   .headingXl {
     font-size: 6vw;
   }
 }
+@media only screen and (max-width: 414px) {
+  .title {
+    font-size: calc(20px + 9vw);
+  }
+}
 
+@media only screen and (max-width: 320px) {
+  .title {
+    font-size: calc(20px + 8vw);
+  }
+}
 /* -------------Animations--------------- */
 
 @-webkit-keyframes gradualOpacity {
