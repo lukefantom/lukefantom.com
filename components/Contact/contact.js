@@ -7,7 +7,9 @@ import cn from "classnames";
 
 export default function ContactSection({ small }) {
   return (
-    <div className={styles.iconContainer}>
+    <div
+      className={cn(small ? styles.iconContainerBurger : styles.iconContainer)}
+    >
       <a
         href={"https://linkedin.com/in/lukefantom"}
         rel="noreferrer"

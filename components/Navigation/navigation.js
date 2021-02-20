@@ -109,9 +109,15 @@ export default function Navigation() {
             <div className="flex flex-col items-center mt-24">
               <Contact small />
               <h3
-                className={cn(utilStyles.boldTextLight, utilStyles.anchorFade4)}
+                className={cn(
+                  utilStyles.boldTextLight,
+                  utilStyles.anchorFade4,
+                  styles.textSlideUp
+                )}
                 style={{
                   borderBottom: "0.22em solid #e7c2b8",
+                  position: "fixed",
+                  bottom: "1rem",
                 }}
               >
                 Luke Fantom © {DateTime.local().year}
