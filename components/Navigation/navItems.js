@@ -5,6 +5,7 @@ import styles from "./navItems.module.css";
 import cn from "classnames";
 import { useTheme } from "next-themes";
 
+
 export default function RenderNavigationItems({ setOpen, open }) {
   const { theme } = useTheme();
 

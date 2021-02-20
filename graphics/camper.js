@@ -1,4 +1,5 @@
 import styles from "./logo.module.css";
+import cn from "classnames";
 
 function Camper() {
   return (
@@ -9,7 +10,7 @@ function Camper() {
       width="auto"
       height="auto"
       viewBox="0 0 886.35125 491.63114"
-      className={styles.camper}
+      className={cn(styles.camper)}
     >
       <title>navigator</title>
       <circle cx="232.39589" cy="103.24635" r="50.76267" fill="#ff6584" />

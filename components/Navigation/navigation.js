@@ -8,6 +8,7 @@ import cn from "classnames";
 import RenderNavigationItems from "./navItems";
 import Overlay from "./overlay";
 import { DateTime } from "luxon";
+import Contact from "../Contact/contact";
 
 export default function Navigation() {
   const { theme } = useTheme();
@@ -106,11 +107,7 @@ export default function Navigation() {
               <RenderNavigationItems setOpen={setOpen} open={open} />
             </ul>
             <div className="flex flex-col items-center mt-24">
-              {/* <h3
-                className={cn(utilStyles.boldTextLight, utilStyles.anchorFade4)}
-              >
-                Built by Me ✌🏼
-              </h3> */}
+              <Contact small />
               <h3
                 className={cn(utilStyles.boldTextLight, utilStyles.anchorFade4)}
                 style={{
