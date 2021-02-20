@@ -12,11 +12,11 @@
 }
 
 .animateFloat {
-  animation: floating 5s ease-in-out infinite;
+  animation: floatingY 5s ease-in-out infinite;
 }
 
 /* Standard syntax */
-@keyframes floating {
+@keyframes floatingY {
   0% {
     -webkit-transform: translate(0, 0px);
     -ms-transform: translate(0, 0px);
@@ -37,23 +37,24 @@
 }
 
 .camper {
-  margin-left: 60px;
-  position: absolute;
-  width: 50%;
-  top: 25%;
+  /* margin-left: 60px; */
+  /* position: absolute; */
+  width: 80%;
+  /* top: 200px; */
+  display: flex;
+  align-self: center;
+  transform: translateY(-45px);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 670px) {
   .camper {
-    margin-left: 100px;
-    top: 30%;
+    width: 65%;
+    transform: translateY(-30px);
   }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 450px) {
   .camper {
-    top: 30%;
-    width: 60%;
-    margin-left: 60px;
+    transform: translateY(-20px);
   }
 }
