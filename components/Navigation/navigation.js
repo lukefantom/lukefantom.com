@@ -56,11 +56,14 @@ export default function Navigation() {
 
     function handleScroll() {
       let currentScrollPos = window.pageYOffset;
+
       if (prevScrollpos > currentScrollPos) {
         nav.style.top = "0";
-      } else {
+      }
+      if (prevScrollpos < currentScrollPos && window.pageYOffset > 0) {
         nav.style.top = "-100px";
       }
+
       prevScrollpos = currentScrollPos;
     }
 
