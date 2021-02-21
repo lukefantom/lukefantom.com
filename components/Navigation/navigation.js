@@ -50,9 +50,30 @@ export default function Navigation() {
     setOpen(!open);
   }
 
+  useEffect(() => {
+    const nav = document.querySelector("nav");
+    let prevScrollpos = window.pageYOffset;
+
+    function handleScroll() {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        nav.style.top = "0";
+      } else {
+        nav.style.top = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
+    window.onscroll = handleScroll;
+  }, []);
+
   return (
     <nav
-      className="absolute dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0"
+      className={cn(
+        "fixed dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0",
+        styles.navBar,
+        theme === "dark" ? styles.navBgDark : styles.navBgLight
+      )}
       style={{ backgroundColor: open && theme === "light" && "#4e7a80" }}
     >
       <div
