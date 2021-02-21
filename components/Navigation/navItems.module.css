@@ -1,3 +1,15 @@
+.navBar {
+  transition: top 0.3s;
+}
+
+.navBgLight {
+  background-color: #f5f5e8f5;
+}
+
+.navBgDark {
+  background-color: #1f2937f1;
+}
+
 .navText {
   letter-spacing: -0.3px;
   font-weight: 700;
