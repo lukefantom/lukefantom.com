@@ -13,8 +13,17 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Atlas() {
   return (
-    <GridItem color={"#69a99a"} title={"Atlas"} underline fontColor={"#2e465c"}>
-      <p className={cn(styles.gridItemText)} style={{ color: "#2e465c" }}>
+    <GridItem
+      color={"#69a99a"}
+      title={"Atlas"}
+      underline
+      animate
+      fontColor={"#2e465c"}
+    >
+      <p
+        className={cn(styles.gridItemText, styles.animateText)}
+        style={{ color: "#2e465c" }}
+      >
         A downtempo electronic music project started in 2011 at University with
         Rem Sutton. Releasing several EP's through US electronic music label
         Symbols and two 12" releases via UK label Coja Records, playing live at

@@ -9,9 +9,13 @@ export default function PokeGet() {
       fontColor={"#2e465c"}
       title={"PokéGet"}
       underline
+      animate
       grow
     >
-      <p className={cn(styles.gridItemText)} style={{ color: "#2e465c" }}>
+      <p
+        className={cn(styles.gridItemText, styles.animateText)}
+        style={{ color: "#2e465c" }}
+      >
         A simple and fun Pokémon generator. This was the first project I built
         using React, which utilises the PokeAPI, and was also a good opportunity
         dig deeper into CSS and the box model in order to build the Pokemon card

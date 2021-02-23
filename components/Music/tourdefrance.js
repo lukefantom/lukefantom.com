@@ -12,8 +12,14 @@ import {
 
 export default function Tourdefrance() {
   return (
-    <GridItem color={"#cf9fb4"} title={"tourdefrance"} fullWidth underline>
-      <p className={cn(styles.gridItemText)}>
+    <GridItem
+      color={"#cf9fb4"}
+      title={"tourdefrance"}
+      fullWidth
+      underline
+      animate
+    >
+      <p className={cn(styles.gridItemText, styles.animateText)}>
         An electronic music project started in 2019 between myself and Carson
         Tworow in Vancouver, BC. Featured on Spotify’s Fresh Finds editor's
         playlist, we have garnered support from the likes of Indie Shuffle and

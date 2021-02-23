@@ -9,9 +9,13 @@ export default function SoCFM() {
       fontColor={"#2e465c"}
       title={"SoC FM"}
       underline
+      animate
       grow
     >
-      <p className={cn(styles.gridItemText)} style={{ color: "#2e465c" }}>
+      <p
+        className={cn(styles.gridItemText, styles.animateText)}
+        style={{ color: "#2e465c" }}
+      >
         A Playlist app created in a single-day Hackathon at the School of Code
         using the Spotify API. The brief outlined 'To create a web experience
         using data from an API'.
