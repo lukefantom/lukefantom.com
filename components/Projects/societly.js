@@ -10,9 +10,13 @@ export default function Societly() {
       title={"Societly"}
       fullWidth
       underline
+      animate
       grow
     >
-      <p className={cn(styles.gridItemText)} style={{ color: "#f5f5e8" }}>
+      <p
+        className={cn(styles.gridItemText, styles.animateText)}
+        style={{ color: "#f5f5e8" }}
+      >
         Keeping all bootcampers connected after the School of Code. The platform
         aims to strengthen the School of Code community, while allowing coaches
         to gauge the wider impact of the course.

@@ -12,6 +12,7 @@ export default function GridItem({
   children,
   image,
   grow,
+  animate,
   underline,
   fontColor,
   hide,
@@ -31,7 +32,10 @@ export default function GridItem({
       >
         {title && (
           <h3
-            className={cn(styles.gridItemHeader)}
+            className={cn(
+              styles.gridItemHeader,
+              animate && styles.animateHeader
+            )}
             style={{ color: fontColor && fontColor }}
           >
             {title}
@@ -58,7 +62,7 @@ export default function GridItem({
         )}
         {text && (
           <p
-            className={cn(styles.gridItemText)}
+            className={cn(styles.gridItemText, animate && styles.animateText)}
             style={{ color: fontColor && fontColor }}
           >
             {text}
@@ -76,7 +80,7 @@ export default function GridItem({
     >
       {title && (
         <h3
-          className={cn(styles.gridItemHeader)}
+          className={cn(styles.gridItemHeader, animate && styles.animateHeader)}
           style={{ color: fontColor && fontColor }}
         >
           {title}
@@ -103,7 +107,7 @@ export default function GridItem({
       )}
       {text && (
         <p
-          className={cn(styles.gridItemText)}
+          className={cn(styles.gridItemText, animate && styles.animateText)}
           style={{ color: fontColor && fontColor }}
         >
           {text}

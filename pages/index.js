@@ -92,21 +92,19 @@ export default function Home({ allPostsData }) {
             20 National Parks and learnt much more than we ever anticipated.
             Check out my Instagram for more!
           </p>
-          <a
-            href={"https://www.instagram.com/lukefantom/"}
-            rel="noreferrer"
-            target="_blank"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-            className={iconStyles.flexMargin}
-          >
-            <FontAwesomeIcon
-              icon={faInstagram}
-              className={iconStyles.iconSmall}
-            />
-          </a>
+          <div className={iconStyles.iconContainer}>
+            <a
+              href={"https://www.instagram.com/lukefantom/"}
+              rel="noreferrer"
+              target="_blank"
+              className={iconStyles.flexMargin}
+            >
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className={iconStyles.iconSmall}
+              />
+            </a>
+          </div>
           <Camper />
         </GridItem>
       </SectionContainer>

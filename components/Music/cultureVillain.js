@@ -18,9 +18,13 @@ export default function CultureVillain() {
       fontColor={"#2e465c"}
       title={"Culture Villain"}
       underline
+      animate
       link={"https://culturevillain.co.uk"}
     >
-      <p className={cn(styles.gridItemText)} style={{ color: "#2e465c" }}>
+      <p
+        className={cn(styles.gridItemText, styles.animateText)}
+        style={{ color: "#2e465c" }}
+      >
         Co-founder of alternative music blog Culture Villain, building a network
         of followers and reaching an average of 1k views per month. Covered
         major festivals events across Europe including Dimensions Festival,

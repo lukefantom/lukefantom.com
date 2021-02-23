@@ -23,9 +23,13 @@ export default function SchoolOfCode() {
       title={"School of Code"}
       fullWidth
       underline
+      animate
       grow
     >
-      <p className={cn(styles.gridItemText)} style={{ color: "#f5f5e8" }}>
+      <p
+        className={cn(styles.gridItemText, styles.animateText)}
+        style={{ color: "#f5f5e8" }}
+      >
         I was selected from over 1700 applicants to join 47 others on a 16-week
         remote bootcamp. The course is an intensive programme covering
         full-stack development, working with a wide range of technologies in an
