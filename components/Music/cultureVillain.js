@@ -14,7 +14,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 export default function CultureVillain() {
   return (
     <GridItem
-      color={"#f5efe0"}
+      color={"rgb(229 224 211)"}
       fontColor={"#2e465c"}
       title={"Culture Villain"}
       underline

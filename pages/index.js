@@ -53,7 +53,7 @@ export default function Home({ allPostsData }) {
         </GridItem>
 
         <GridItem
-          color={"#f5efe0"}
+          color={"#e9e4d9"}
           title={"I used to fix computers"}
           fontColor={"#2e465c"}
         >
@@ -73,7 +73,7 @@ export default function Home({ allPostsData }) {
         </GridItem>
 
         <GridItem
-          color={"#f5efe0"}
+          color={"#e9e4d9"}
           text={""}
           image={"/images/profile.jpg"}
           hide
