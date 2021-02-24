@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import LogoBackground from "../graphics/logoBackground";
 
 const name = "Luke Fantom";
-export const siteTitle = "Luke Fantom";
+export const siteTitle = "Luke Fantom - Developer";
 
 export default function Layout({ children, home }) {
   const { theme } = useTheme();
@@ -20,7 +20,7 @@ export default function Layout({ children, home }) {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="Creator, producer and software developer."
+            content="Luke Fantom - Creator, producer and software developer."
           />
           <meta
             property="og:image"
