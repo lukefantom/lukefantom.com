@@ -16,10 +16,18 @@ const ThemeChanger = () => {
     setMounted(true);
   }, []);
 
-  // Checks if user has a preferred local color scheme
-  // Enables theme preference based on user preference
   useEffect(() => {
     if (mounted) {
+      // Checks if user has previously set a theme on the site
+      // Enables theme preference based on user preference
+      let themePref = localStorage.getItem("themePref");
+      if (themePref) {
+        setTheme(themePref);
+        return;
+      }
+
+      // Checks if user has a local system color scheme
+      // Enables theme preference based on system preference
       window.matchMedia("(prefers-color-scheme: dark)").matches
         ? setTheme("dark")
         : setTheme("light");
@@ -42,6 +50,11 @@ const ThemeChanger = () => {
       .removeEventListener("change", darkModeListener);
   }, [mounted]);
 
+  function handleThemeChange() {
+    setTheme(theme === "dark" ? "light" : "dark");
+    localStorage.setItem("themePref", theme === "light" ? "dark" : "light");
+  }
+
   if (!mounted) return null;
 
   return (
@@ -53,7 +66,7 @@ const ThemeChanger = () => {
           "order-2 md:order-3 focus:outline-none",
           styles.growButton
         )}
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onClick={handleThemeChange}
         style={{
           display: "flex",
           flexDirection: "column",

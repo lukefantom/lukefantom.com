@@ -44,7 +44,7 @@ export default function Home({ allPostsData }) {
           color={"#547f9c"}
           fontColor={"#f5f5e8"}
           text={
-            "I am a software developer, designer and music producer who recently graduated from the School of Code. I have a strong passion for problem solving, creating great content and collaborating with others, whether this be through writing, music or more recently code!"
+            "I am a software developer, music producer and content creator who recently graduated from the School of Code. I have a strong passion for problem solving and creating inspiring content, whether this be through writing, music or code."
           }
           fullWidth
           underline
