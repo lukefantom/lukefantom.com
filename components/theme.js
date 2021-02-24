@@ -11,7 +11,7 @@ const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  // When mounted on client, now we can show the UI
+  // When mounted on client, show the UI
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -19,10 +19,28 @@ const ThemeChanger = () => {
   // Checks if user has a preferred local color scheme
   // Enables theme preference based on user preference
   useEffect(() => {
-    window.matchMedia("(prefers-color-scheme: dark)".matches)
-      ? setTheme("dark")
-      : setTheme("light");
-  }, []);
+    if (mounted) {
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? setTheme("dark")
+        : setTheme("light");
+    }
+
+    function darkModeListener(event) {
+      if (event.matches) {
+        setTheme("dark");
+        return;
+      }
+      setTheme("light");
+    }
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", darkModeListener);
+
+    return window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .removeEventListener("change", darkModeListener);
+  }, [mounted]);
 
   if (!mounted) return null;
 
