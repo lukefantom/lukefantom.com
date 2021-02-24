@@ -4,6 +4,7 @@ import iconStyles from "../Contact/contact.module.css";
 import cn from "classnames";
 import PostGreSql from "../../graphics/postGreSQL";
 import Firebase from "../../graphics/firebase";
+import Next from "../../graphics/next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faReact,
@@ -47,6 +48,7 @@ export default function SchoolOfCode() {
         <FontAwesomeIcon icon={faGithub} className={iconStyles.iconTech} />
         <PostGreSql className={iconStyles.iconTech} />
         <Firebase className={iconStyles.iconTech} />
+        <Next className={iconStyles.iconTech} />
       </div>
     </GridItem>
   );
