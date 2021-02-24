@@ -5,7 +5,7 @@ import cn from "classnames";
 export default function SoCFM() {
   return (
     <GridItem
-      color={"#FDF0EC"}
+      color={"#e3d7d4"}
       fontColor={"#2e465c"}
       title={"SoC FM"}
       underline
