@@ -76,7 +76,7 @@ export default function Navigation() {
 
       window.onscroll = handleScroll;
     }
-  }, []);
+  }, [mounted]);
 
   if (!mounted) return null;
 
