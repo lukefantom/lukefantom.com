@@ -9,10 +9,20 @@ import { faMoon as fasMoon } from "@fortawesome/free-solid-svg-icons";
 
 const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme("light");
+  const { theme, setTheme } = useTheme();
 
   // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Checks if user has a preferred local color scheme
+  // Enables theme preference based on user preference
+  useEffect(() => {
+    window.matchMedia("(prefers-color-scheme: dark)".matches)
+      ? setTheme("dark")
+      : setTheme("light");
+  }, []);
 
   if (!mounted) return null;
 

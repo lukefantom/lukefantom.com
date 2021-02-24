@@ -11,9 +11,15 @@ import { DateTime } from "luxon";
 import Contact from "../Contact/contact";
 
 export default function Navigation() {
+  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
   const [burger, setBurger] = useState("");
   const [open, setOpen] = useState(false);
+
+  // When mounted on client, now we can show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   function scrollToTop() {
     window.scrollTo({
@@ -51,24 +57,28 @@ export default function Navigation() {
   }
 
   useEffect(() => {
-    const nav = document.querySelector("nav");
-    let prevScrollpos = window.pageYOffset;
+    if (mounted) {
+      const nav = document.querySelector("nav");
+      let prevScrollpos = window.pageYOffset;
 
-    function handleScroll() {
-      let currentScrollPos = window.pageYOffset;
+      function handleScroll() {
+        let currentScrollPos = window.pageYOffset;
 
-      if (prevScrollpos > currentScrollPos) {
-        nav.style.top = "0";
+        if (prevScrollpos > currentScrollPos) {
+          nav.style.top = "0";
+        }
+        if (prevScrollpos < currentScrollPos && window.pageYOffset > 0) {
+          nav.style.top = "-100px";
+        }
+
+        prevScrollpos = currentScrollPos;
       }
-      if (prevScrollpos < currentScrollPos && window.pageYOffset > 0) {
-        nav.style.top = "-100px";
-      }
 
-      prevScrollpos = currentScrollPos;
+      window.onscroll = handleScroll;
     }
-
-    window.onscroll = handleScroll;
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <nav
