@@ -15,6 +15,10 @@
   font-weight: 700;
 }
 
+.darkModeNav {
+  padding-left: 2rem;
+}
+
 .marginNav {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
