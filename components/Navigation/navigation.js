@@ -67,7 +67,7 @@ export default function Navigation() {
         if (prevScrollpos > currentScrollPos) {
           nav.style.top = "0";
         }
-        if (prevScrollpos < currentScrollPos && window.pageYOffset > 0) {
+        if (prevScrollpos < currentScrollPos && window.pageYOffset > 50) {
           nav.style.top = "-100px";
         }
 
