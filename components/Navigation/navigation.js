@@ -67,7 +67,7 @@ export default function Navigation() {
         if (prevScrollpos > currentScrollPos) {
           nav.style.top = "0";
         }
-        if (prevScrollpos < currentScrollPos && window.pageYOffset > 50) {
+        if (prevScrollpos < currentScrollPos && window.pageYOffset > 5) {
           nav.style.top = "-100px";
         }
 
@@ -163,7 +163,7 @@ export default function Navigation() {
         {/* -----------Dark Mode------------- */}
 
         <div
-          className="order-3"
+          className={cn("order-3 ml-2 md:ml-8")}
           style={{
             display: open ? "none" : "inline-block",
           }}
