@@ -7,8 +7,8 @@ function Camper() {
       id="e0958169-61ce-49c9-8f2a-5e3a81fc50e8"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
-      width="auto"
-      height="auto"
+      width="100%"
+      height="100%"
       viewBox="0 0 886.35125 491.63114"
       className={cn(styles.camper)}
     >

@@ -64,10 +64,14 @@ export default function Navigation() {
       function handleScroll() {
         let currentScrollPos = window.pageYOffset;
 
+        window.pageYOffset > 25
+          ? (nav.style.boxShadow = "0 2px 5px rgb(0 0 0 / 9%)")
+          : (nav.style.boxShadow = "none");
+
         if (prevScrollpos > currentScrollPos) {
           nav.style.top = "0";
         }
-        if (prevScrollpos < currentScrollPos && window.pageYOffset > 5) {
+        if (prevScrollpos < currentScrollPos && window.pageYOffset > 50) {
           nav.style.top = "-100px";
         }
 
