@@ -30,9 +30,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const body = document.querySelector("body");
-    open
-      ? body.classList.add("preventScroll")
-      : body.classList.remove("preventScroll");
+    open ? body.classList.add("preventScroll") : body.classList.remove("preventScroll");
 
     function handleResize() {
       let width = window.innerWidth;
@@ -64,9 +62,7 @@ export default function Navigation() {
       function handleScroll() {
         let currentScrollPos = window.pageYOffset;
 
-        window.pageYOffset > 25
-          ? (nav.style.boxShadow = "0 2px 5px rgb(0 0 0 / 9%)")
-          : (nav.style.boxShadow = "none");
+        window.pageYOffset > 25 ? (nav.style.boxShadow = "0 2px 5px rgb(0 0 0 / 9%)") : (nav.style.boxShadow = "none");
 
         if (prevScrollpos > currentScrollPos) {
           nav.style.top = "0";
@@ -85,28 +81,12 @@ export default function Navigation() {
   if (!mounted) return null;
 
   return (
-    <nav
-      className={cn(
-        "fixed dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0",
-        styles.navBar,
-        theme === "dark" ? styles.navBgDark : styles.navBgLight
-      )}
-      style={{ backgroundColor: open && theme === "light" && "#4e7a80" }}
-    >
-      <div
-        className={cn(
-          "flex h-full container mx-auto justify-between items-center",
-          styles.navPadding
-        )}
-      >
+    <nav className={cn("fixed dark:text-whitedarktheme h-16 w-full z-50 mb-8 top-0", styles.navBar, theme === "dark" ? styles.navBgDark : styles.navBgLight)} style={{ backgroundColor: open && theme === "light" && "#4e7a80" }}>
+      <div className={cn("flex h-full container mx-auto justify-between items-center", styles.navPadding)}>
         {/* -----------Site Logo------------- */}
         <Link href={{ pathname: "/" }}>
           <a
-            className={cn(
-              "logo flex flex-row md:order-1 order-2",
-              theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight,
-              utilStyles.titleSmall
-            )}
+            className={cn("logo flex flex-row md:order-1 order-2", theme === "dark" ? utilStyles.anchorDark : utilStyles.anchorLight, utilStyles.titleSmall)}
             style={{
               fontWeight: 800,
               letterSpacing: "-0.05rem",
@@ -116,10 +96,7 @@ export default function Navigation() {
             <div className="letter inline-block top-0 relative">L</div>
             <div className="letter inline-block top-0 relative">u</div>
             <div className="letter inline-block top-0 relative">k</div>
-            <div
-              className="letter inline-block top-0 relative"
-              style={{ marginRight: "0.2rem" }}
-            >
+            <div className="letter inline-block top-0 relative" style={{ marginRight: "0.2rem" }}>
               e
             </div>
             <div className="letter inline-block top-0 relative">F</div>
@@ -147,11 +124,7 @@ export default function Navigation() {
             <div className="flex flex-col items-center mt-24">
               <Contact small />
               <h3
-                className={cn(
-                  utilStyles.boldTextLight,
-                  utilStyles.anchorFade4,
-                  styles.textSlideUp
-                )}
+                className={cn(utilStyles.boldTextLight, utilStyles.anchorFade4, styles.textSlideUp)}
                 style={{
                   borderBottom: "0.22em solid #e7c2b8",
                   position: "fixed",
@@ -167,7 +140,7 @@ export default function Navigation() {
         {/* -----------Dark Mode------------- */}
 
         <div
-          className={cn("order-3 ml-2 md:ml-8")}
+          className={cn("order-3 ml-2 md:ml-16")}
           style={{
             display: open ? "none" : "inline-block",
           }}

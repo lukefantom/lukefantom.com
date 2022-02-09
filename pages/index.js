@@ -43,66 +43,32 @@ export default function Home({ allPostsData }) {
           title={"Hey there, I'm Luke."}
           color={"#547f9c"}
           fontColor={"#f5f5e8"}
-          text={
-            "I am a software developer, music producer and content creator who recently graduated from the School of Code. I have a strong passion for problem solving and creating inspiring content, whether this be through writing, music or code."
-          }
+          text={"I am a software developer, music producer and School of Code graduate. I have a strong passion for problem solving and creating inspiring content, whether this be through writing, music or code."}
           fullWidth
           underline
         >
           <HelloGraphic />
         </GridItem>
 
-        <GridItem
-          color={"#e9e4d9"}
-          title={"I used to fix computers"}
-          fontColor={"#2e465c"}
-        >
+        <GridItem color={"#e9e4d9"} title={"I used to fix computers"} fontColor={"#2e465c"}>
           <p className={gridStyles.gridItemText} style={{ color: "#2e465c" }}>
-            After several years working in technology, mainly focusing on
-            hardware support, I recently decided to take the leap and swap the
-            toolkit for JavaScript and join the{" "}
-            <a
-              href="https://www.schoolofcode.co.uk/"
-              target="_blank"
-              className={cn(utilStyles.anchorLight)}
-            >
+            After several years working in technology, mainly focusing on hardware support, I recently decided to take the leap and swap the toolkit for JavaScript and join the{" "}
+            <a href="https://www.schoolofcode.co.uk/" target="_blank" className={cn(utilStyles.anchorLight)}>
               School of Code
             </a>
-            .
+            . I now focus most of my time working professionally as a front end developer, and working on freelance projects. 
           </p>
         </GridItem>
 
-        <GridItem
-          color={"#e9e4d9"}
-          text={""}
-          image={"/images/profile.jpg"}
-          hide
-        />
-        <GridItem
-          fullWidth
-          title={"I'm a keen hiker and love travelling..."}
-          underline
-          color={"#d3dbd9"}
-          fontColor={"#2e465c"}
-        >
+        <GridItem color={"#e9e4d9"} text={""} image={"/images/profile.jpg"} hide />
+        <GridItem fullWidth title={"I'm a keen hiker and love travelling..."} underline color={"#d3dbd9"} fontColor={"#2e465c"}>
           <p className={gridStyles.gridItemText} style={{ color: "#2e465c" }}>
-            After moving to Vancouver for two years in 2017, I fell in love with
-            the city and spent the latter half of 2018 building a camper van and
-            travelling around North America with my girlfriend. We visited over
-            20 National Parks and learnt much more than we ever anticipated.
-            Check out my Instagram for more!
+            After moving to Vancouver for two years in 2017, I fell in love with the city and spent the latter half of 2018 building a camper van and travelling around North America with my girlfriend. We visited over 20 National Parks and learnt much more than we ever anticipated. Check out my
+            Instagram for more!
           </p>
           <div className={iconStyles.iconContainer}>
-            <a
-              href={"https://www.instagram.com/lukefantom/"}
-              rel="noreferrer"
-              target="_blank"
-              className={iconStyles.flexMargin}
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className={iconStyles.iconSmall}
-              />
+            <a href={"https://www.instagram.com/lukefantom/"} rel="noreferrer" target="_blank" className={iconStyles.flexMargin}>
+              <FontAwesomeIcon icon={faInstagram} className={iconStyles.iconSmall} />
             </a>
           </div>
           <Camper />
@@ -128,16 +94,12 @@ export default function Home({ allPostsData }) {
           color={"#d08090ed"}
           fullWidth
           // underline
-          text={
-            "I'm always looking for new projects and ideas. Reach out via Email, LinkedIn or check out my Github for more information on my previous work."
-          }
+          text={"I'm always looking for new projects and ideas. Reach out via Email, LinkedIn or check out my Github for more information on my previous work."}
         >
           <ContactSection />
           <br />
           <h3 className={utilStyles.boldText}>Built by Me ✌🏼</h3>
-          <h3 className={utilStyles.boldText}>
-            Luke Fantom © {DateTime.local().year}
-          </h3>
+          <h3 className={utilStyles.boldText}>Luke Fantom © {DateTime.local().year}</h3>
         </GridItem>
       </SectionContainer>
 

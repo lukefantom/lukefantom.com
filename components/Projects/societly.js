@@ -8,34 +8,13 @@ import MaterialUI from "../../graphics/materialUi";
 import Postman from "../../graphics/postman";
 import Heroku from "../../graphics/heroku";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faReact,
-  faJsSquare,
-  faCss3,
-  faHtml5,
-  faAws,
-  faGithub,
-  faNodeJs,
-} from "@fortawesome/free-brands-svg-icons";
+import { faReact, faJsSquare, faCss3, faHtml5, faAws, faGithub, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 
 export default function Societly() {
   return (
-    <GridItem
-      color={"#3bab87"}
-      fontColor={"#f5f5e8"}
-      title={"Societly"}
-      fullWidth
-      underline
-      animate
-      grow
-    >
-      <p
-        className={cn(styles.gridItemText, styles.animateText)}
-        style={{ color: "#f5f5e8" }}
-      >
-        Keeping all bootcampers connected after the School of Code. The platform
-        aims to strengthen the School of Code community, while allowing coaches
-        to gauge the wider impact of the course.
+    <GridItem color={"#3bab87"} fontColor={"#f5f5e8"} title={"Societly"} underline animate grow>
+      <p className={cn(styles.gridItemText, styles.animateText)} style={{ color: "#f5f5e8" }}>
+        Keeping all bootcampers connected after the School of Code. The platform aims to strengthen the School of Code community, while allowing coaches to gauge the wider impact of the course.
       </p>
       <div className={iconStyles.iconContainer}>
         <FontAwesomeIcon icon={faReact} className={iconStyles.iconTech} />
